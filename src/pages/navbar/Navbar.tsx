@@ -16,7 +16,7 @@ const Navbar = ({currentPage, setCurrentPage}: Props) => {
             <img src={logo} alt="logo" />
           </div>
 
-          <div>
+          <div className="flex gap-10">
             <Link
               page="Home"
               currentPage={currentPage}
