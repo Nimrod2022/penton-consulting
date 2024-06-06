@@ -2,17 +2,25 @@ import { CurrentPage } from "./types";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
-  page: CurrentPage;
+  targetPage: CurrentPage;
   children: React.ReactNode;
+  bgColor?: string;
+  textColor?: string
   setCurrentPage: (value: CurrentPage) => void;
 };
 
-const Button = ({ page, children, setCurrentPage }: Props) => {
+const Button = ({
+  targetPage,
+  children,
+  setCurrentPage,
+  bgColor = "bg-[#FFA500]",
+  textColor = "text-black",
+}: Props) => {
   return (
     <AnchorLink
-      href={`${page}`}
-      onClick={() => setCurrentPage(page)}
-      className="px-5 py-2"
+      href={`#${targetPage}`}
+      onClick={() => setCurrentPage(targetPage)}
+      className={`px-4 py-2 ${bgColor} ${textColor} rounded-md`}
     >
       {children}
     </AnchorLink>

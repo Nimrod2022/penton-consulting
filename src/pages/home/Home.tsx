@@ -2,7 +2,9 @@ import { useState } from "react"
 import Navbar from "../navbar/Navbar"
 import { CurrentPage } from "../../shared/types"
 
-type Props = {}
+type Props = {
+    
+}
 
 const Home = (props: Props) => {
 
