@@ -1,11 +1,11 @@
-import { CurrentPage } from "./types";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { useNavigate } from "react-router-dom";
+import { CurrentPage } from "../shared/types";
 
 type Props = {
   targetPage: CurrentPage;
   children: React.ReactNode;
   bgColor?: string;
-  textColor?: string
+  textColor?: string;
   setCurrentPage: (value: CurrentPage) => void;
 };
 
@@ -16,14 +16,31 @@ const Button = ({
   bgColor = "bg-[#FFA500]",
   textColor = "text-black",
 }: Props) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    setCurrentPage(targetPage);
+    if (targetPage === CurrentPage.Services) {
+      navigate("/services");
+    } else if (targetPage === CurrentPage.Projects) {
+      navigate("/projects");
+    } else if (targetPage === CurrentPage.Contact) {
+      navigate("/contact");
+    } else {
+      const element = document.getElementById(targetPage);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
-    <AnchorLink
-      href={`#${targetPage}`}
-      onClick={() => setCurrentPage(targetPage)}
+    <button
+      onClick={handleClick}
       className={`px-4 py-2 ${bgColor} ${textColor} rounded-md`}
     >
       {children}
-    </AnchorLink>
+    </button>
   );
 };
 

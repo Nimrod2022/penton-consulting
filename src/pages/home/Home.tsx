@@ -1,17 +1,15 @@
-import { useState } from "react"
-import Navbar from "../navbar/Navbar"
-import { CurrentPage } from "../../shared/types"
+import { useState } from "react";
+import Navbar from "../navbar/Navbar";
+import { CurrentPage } from "../../shared/types";
 
-type Props = {
-    
-}
+const Home = () => {
+  const [currentPage, setCurrentPage] = useState<CurrentPage>(CurrentPage.Home);
 
-const Home = (props: Props) => {
-
-    const [currentPage, setCurrentPage] = useState<CurrentPage>(CurrentPage.Home)
   return (
-    <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage}/>
-  )
-}
+    <>
+      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+    </>
+  );
+};
 
-export default Home
+export default Home;
