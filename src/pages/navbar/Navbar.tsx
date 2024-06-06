@@ -20,7 +20,7 @@ const Navbar = ({ currentPage, setCurrentPage }: Props) => {
   return (
     <header>
       <nav>
-        <div className="w-full fixed top-0 font-libre text-[#1E1E1E] py-6">
+        <div className="w-full fixed top-0 font-libre text-[#1E1E1E] ">
           {isAboveMediumScreens ? (
             <div className="mx-auto w-5/6 flex items-center justify-between">
               <div>
@@ -28,7 +28,7 @@ const Navbar = ({ currentPage, setCurrentPage }: Props) => {
                   <img src={logo} alt="logo" />
                 </Link>
               </div>
-              <div className=" flex  gap-10 text-lg">
+              <div className=" flex  gap-10 text-md">
                 <Link to="/" onClick={() => setCurrentPage(CurrentPage.Home)}>
                   Home
                 </Link>
@@ -57,6 +57,7 @@ const Navbar = ({ currentPage, setCurrentPage }: Props) => {
                   setCurrentPage={setCurrentPage}
                   bgColor="bg-[#003366]"
                   textColor="text-white"
+                  border="none"
                 >
                   Request a Quote
                 </Button>

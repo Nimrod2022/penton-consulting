@@ -1,4 +1,5 @@
 import { CurrentPage } from "../../shared/types";
+import Hero from "../../components/Hero";
 
 
 type Props = {
@@ -8,11 +9,8 @@ type Props = {
 
 const Home = (props: Props) => {
   return (
-    <section id="home" className="py-20 mx-auto min-h-full w-5/6">
-      <div>
-        <h1>Home</h1>
-        <p>Welcome to the Home Page</p>
-      </div>
+    <section id="home" className="py-20 w-full min-h-full ">
+      <Hero />
     </section>
   );
 };

@@ -6,6 +6,7 @@ type Props = {
   children: React.ReactNode;
   bgColor?: string;
   textColor?: string;
+  border?: string
   setCurrentPage: (value: CurrentPage) => void;
 };
 
@@ -15,6 +16,7 @@ const Button = ({
   setCurrentPage,
   bgColor = "bg-[#FFA500]",
   textColor = "text-black",
+  border= "border border-[#39FF14]"
 }: Props) => {
   const navigate = useNavigate();
 
@@ -38,7 +40,7 @@ const Button = ({
   return (
     <button
       onClick={handleClick}
-      className={`px-4 py-2 ${bgColor} ${textColor} rounded-md`}
+      className={`px-4 py-2 ${bgColor} ${textColor} ${border} rounded-md`}
     >
       {children}
     </button>
