@@ -27,6 +27,7 @@ const Button = ({
     } else if (targetPage === CurrentPage.Contact) {
       navigate("/contact");
     } else {
+      navigate("/");
       const element = document.getElementById(targetPage);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });

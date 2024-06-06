@@ -1,14 +1,41 @@
-import { useState } from "react";
-import Navbar from "../navbar/Navbar";
+
 import { CurrentPage } from "../../shared/types";
+import Button from "../../shared/Button";
 
-const Home = () => {
-  const [currentPage, setCurrentPage] = useState<CurrentPage>(CurrentPage.Home);
+type Props = {
+  currentPage: CurrentPage;
+  setCurrentPage: (value: CurrentPage) => void;
+};
 
+const Home = ({ currentPage, setCurrentPage }: Props) => {
   return (
-    <>
-      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-    </>
+    <div>
+      <section id="home" className="py-20">
+        <h1>Home</h1>
+        <p>Welcome to the Home Page</p>
+      </section>
+      <section id="services" className="py-20">
+        <h1>Services</h1>
+        <Button
+          targetPage={CurrentPage.Services}
+          setCurrentPage={setCurrentPage}
+        >
+          See All Services
+        </Button>
+      </section>
+      <section id="projects" className="py-20">
+        <h1>Projects</h1>
+      </section>
+      <section id="contact" className="py-20">
+        <h1>Contact</h1>
+        <Button
+          targetPage={CurrentPage.Contact}
+          setCurrentPage={setCurrentPage}
+        >
+          Get a Quote
+        </Button>
+      </section>
+    </div>
   );
 };
 
