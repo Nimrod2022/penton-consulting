@@ -1,21 +1,19 @@
-
 import { CurrentPage } from "../../shared/types";
-import Button from "../../shared/Button";
+
 
 type Props = {
   currentPage: CurrentPage;
   setCurrentPage: (value: CurrentPage) => void;
 };
 
-const Home = ({ currentPage, setCurrentPage }: Props) => {
+const Home = (props: Props) => {
   return (
-    <div>
-      <section id="home" className="py-20">
+    <section id="home" className="py-20 mx-auto min-h-full w-5/6">
+      <div>
         <h1>Home</h1>
         <p>Welcome to the Home Page</p>
-      </section>
-      
-    </div>
+      </div>
+    </section>
   );
 };
 

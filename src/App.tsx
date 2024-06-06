@@ -2,9 +2,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 import { CurrentPage } from "./shared/types";
 import Home from "./pages/home/Home";
-import Services from "./pages/home/Services";
-import Projects from "./pages/home/Projects";
-import Contact from "./shared/Contact";
+import Services from "./pages/services/Services";
+import Projects from "./pages/projects/Projects";
+import Contact from "./pages/contact/Contact";
 import Navbar from "./pages/navbar/Navbar";
 
 function App() {

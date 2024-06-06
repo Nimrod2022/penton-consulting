@@ -1,7 +1,7 @@
 import { CurrentPage } from "../../shared/types";
 import { Link } from "react-router-dom";
 import logo from "/assets/logo.svg";
-import Button from "../../shared/Button";
+import Button from "../../components/Button";
 import UseMediaQuery from "../../hooks/UseMediaQuery";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
@@ -75,6 +75,7 @@ const Navbar = ({ currentPage, setCurrentPage }: Props) => {
               </div>
               <div>
                 <button
+                  aria-label="Toggle Menu"
                   className="rounded-full bg-[#003366] fixed right-5 top-0 z-40  p-2 my-4"
                   onClick={() => setIsMenuToggled(!isMenuToggled)}
                 >
@@ -88,6 +89,7 @@ const Navbar = ({ currentPage, setCurrentPage }: Props) => {
           // Mobile Menu
           <div className="relative">
             <button
+              aria-label="Toggle Menu"
               onClick={() => setIsMenuToggled(!isMenuToggled)}
               className="fixed top-4 right-5 bg-[#003366] rounded-full z-50"
             >
