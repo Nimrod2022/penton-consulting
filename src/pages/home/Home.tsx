@@ -7,10 +7,10 @@ type Props = {
   setCurrentPage: (value: CurrentPage) => void;
 };
 
-const Home = (props: Props) => {
+const Home = ({setCurrentPage}: Props) => {
   return (
     <section id="home" className="py-20 w-full min-h-full ">
-      <Hero />
+      <Hero setCurrentPage={setCurrentPage}/>
     </section>
   );
 };

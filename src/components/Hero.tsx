@@ -2,8 +2,8 @@ import landingImage from "../../public/assets/landing-bg.svg";
 import { CurrentPage } from "../shared/types";
 import Button from "./Button";
 type Props = {
-  targetPage: CurrentPage;
-  children: React.ReactNode;
+  targetPage?: CurrentPage;
+  children?: React.ReactNode;
   bgColor?: string;
   textColor?: string;
   border?: string;
