@@ -1,9 +1,11 @@
 import Service from './Service';
 import environmentService from '../../../public/assets/environment-services.svg';
 
-type Props = {};
+type Props = {
+    bgColor: string
+};
 
-const EnvironmentalCompliance = (props: Props) => {
+const EnvironmentalCompliance = ({bgColor}: Props) => {
   return (
     <Service
       title="Architectural, Structural & Mechanical Drawings"
@@ -11,6 +13,7 @@ const EnvironmentalCompliance = (props: Props) => {
            for energy projects in the oil and gas industry, as well as general projects."
       image={environmentService}
       serviceId={3}
+      bgColor={bgColor}
     ></Service>
   );
 };

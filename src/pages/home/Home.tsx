@@ -6,6 +6,8 @@ import EnvironmentalCompliance from '../../components/services/EnvironmentalComp
 import { CurrentPage } from '../../shared/types';
 
 const Home = () => {
+
+  const homeServiceBG = 'bg-[#F6F9FC]';
   return (
     <>
       <section id="home" className="pt-20 w-full ">
@@ -30,9 +32,9 @@ const Home = () => {
           </div>
         </div>
         <div className="pt-5 md:flex md:justify-between ">
-          <Engineering />
-          <EnergyCompliance />
-          <EnvironmentalCompliance />
+          <Engineering bgColor={homeServiceBG} />
+          <EnergyCompliance bgColor={homeServiceBG} />
+          <EnvironmentalCompliance bgColor={homeServiceBG} />
         </div>
 
         <div className="md:py-20  py-10 flex justify-center md:justify-start ">

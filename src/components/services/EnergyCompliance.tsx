@@ -1,9 +1,12 @@
+
 import energyCompliance from '../../../public/assets/energy-compliance-service.svg';
 import Service from './Service';
 
-type Props = {};
+type Props = {
+    bgColor: string
+}
 
-const EnergyCompliance = (props: Props) => {
+const EnergyCompliance = ({bgColor}: Props) => {
   return (
     <Service
       title="Energy Regulatory Compliance"
@@ -11,8 +14,9 @@ const EnergyCompliance = (props: Props) => {
              compliance services, including licenses, permits, technical audits, and emergency response plans."
       image={energyCompliance}
       serviceId={2}
+      bgColor={bgColor}
     ></Service>
   );
-};
+}
 
-export default EnergyCompliance;
+export default EnergyCompliance
