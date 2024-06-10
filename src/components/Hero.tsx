@@ -3,6 +3,7 @@ import landingImage from '../../public/assets/landing-bg.svg';
 import { useAppSelector } from '../hooks/UseApp';
 import { CurrentPage } from '../shared/types';
 
+
 const Hero = () => {
   const currentPage = useAppSelector((state) => state.page.page);
   console.log('Current page in Hero component:', currentPage);
@@ -13,7 +14,7 @@ const Hero = () => {
           <img
             src={landingImage}
             alt="home"
-            className="md:pt-5 hidden md:block md:w-full h-full"
+            className="md:pt-5 hidden md:block md:w-full"
           />
           <img
             src="../../public/assets/landing-mobile.png"
@@ -21,8 +22,8 @@ const Hero = () => {
             className="md:pt-5 md:hidden block md:w-full h-4/6"
           />
         </div>
-        <div className="w-full  bg-[#003366]">
-          <div className="text-white   md:py-10 md:flex justify-center md:w-5/6 xl:w-4/6 mx-auto items-center">
+        <div className="w-full bg-[#003366] ">
+          <div className="text-white   md:py-20 lg:py-28 md:flex  md:w-5/6 xl:w-4/6 mx-auto items-center">
             <div className="md:pt-0 pt-5">
               <h1 className="md:text-4xl text-xl md:px-0 px-10  md:text-start text-center font-libre">
                 Where Innovation Meets Energy Excellence
