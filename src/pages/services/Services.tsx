@@ -15,9 +15,9 @@ const Services = () => {
         <h4 className=" text-white text-center text-3xl font-libre">
           Services
         </h4>
-        <div className="text-center md:text-xl justify-center flex items-center md:gap-5 text-white">
+        <div className="text-center md:text-xl justify-center flex items-center md:gap-2 text-white">
           <p>Home</p>
-          <IoArrowForwardSharp className="text-[#FFA500] size-6" />
+          <IoArrowForwardSharp className="text-[#FFA500]  size-6" />
           <p>Services</p>
         </div>
       </div>
