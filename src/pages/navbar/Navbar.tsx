@@ -40,7 +40,7 @@ const Navbar = () => {
       <nav>
         <div className="w-full  fixed top-0 font-libre text-[#1E1E1E] ">
           {isAboveMediumScreens ? (
-            <div className="mx-auto bg-white navbar w-5/6 flex items-center justify-between">
+            <div className="mx-auto bg-white navbar md:w-5/6 xl:w-4/6 flex items-center justify-between">
               <div>
                 <Link
                   to="/"

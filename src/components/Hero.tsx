@@ -26,14 +26,14 @@ const Hero = () => {
           />
         </div>
         <div className="w-full  bg-[#003366]">
-          <div className="text-white   md:py-10 md:flex justify-center md:w-5/6 mx-auto items-center">
+          <div className="text-white   md:py-10 md:flex justify-center md:w-5/6 xl:w-4/6 mx-auto items-center">
             <div className="md:pt-0 pt-5">
               <h1 className="md:text-4xl text-xl md:px-0 px-10  md:text-start text-center font-libre">
                 Where Innovation Meets Energy Excellence
               </h1>
             </div>
             <div className="md:py-0 px-5 py-5">
-              <div className="md:w-5/6">
+              <div className="md:w-5/6 ">
                 <p className="md:w-5/6 text-center md:text-start">
                   Penton is more than a service provider; we&apos;re your
                   trusted energy partner. With our expertise, reliability, and
@@ -49,7 +49,6 @@ const Hero = () => {
                 <Button
                   targetPage={CurrentPage.Services}
                   style="bg-[#003366] text-white border border-[#39FF14]"
-                  
                 >
                   Learn more
                 </Button>

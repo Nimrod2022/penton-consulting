@@ -13,7 +13,7 @@ const Home = () => {
       <section id="home" className="pt-20 w-full min-h-full ">
         <Hero />
       </section>
-      <section id="services" className="w-5/6 mx-auto py-16">
+      <section id="services" className="w-5/6 xl:w-4/6 mx-auto py-16">
         <div className="mx-auto">
           <div>
             <h3 className="text-[#FFA500] font-semibold text-md py-5">
