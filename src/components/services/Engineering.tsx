@@ -2,10 +2,10 @@ import Service from './Service';
 import engineeringService from '../../../public/assets/engineering-service.svg';
 
 type Props = {
-    bgColor: string
+  bgColor: string;
 };
 
-const Engineering = ({bgColor}: Props) => {
+const Engineering = ({ bgColor }: Props) => {
   return (
     <Service
       title="Architectural, Structural & Mechanical Drawings"

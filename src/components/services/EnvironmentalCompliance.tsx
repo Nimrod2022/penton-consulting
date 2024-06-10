@@ -2,10 +2,10 @@ import Service from './Service';
 import environmentService from '../../../public/assets/environment-services.svg';
 
 type Props = {
-    bgColor: string
+  bgColor: string;
 };
 
-const EnvironmentalCompliance = ({bgColor}: Props) => {
+const EnvironmentalCompliance = ({ bgColor }: Props) => {
   return (
     <Service
       title="Architectural, Structural & Mechanical Drawings"

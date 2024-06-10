@@ -38,8 +38,13 @@ body,
     margin-top 0.3s ease;
 }
 
-.services-bg{
+.services-bg {
   background:
-  linear-gradient(0deg, rgba(0, 51, 102, 0.71) 0%, rgba(0, 51, 102, 0.71) 100%),
-  url('../public/assets/services-bg.svg') lightgray -19.639px -375.444px / 101.331% 342.011%
+    linear-gradient(
+      0deg,
+      rgba(0, 51, 102, 0.71) 0%,
+      rgba(0, 51, 102, 0.71) 100%
+    ),
+    url('../public/assets/services-bg.svg') lightgray -19.639px -375.444px /
+      101.331% 342.011%;
 }

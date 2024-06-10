@@ -5,7 +5,7 @@ type Props = {
   description: string;
   image: string;
   serviceId: number;
-  bgColor: string
+  bgColor: string;
 };
 
 const Service = ({ title, bgColor, description, image, serviceId }: Props) => {

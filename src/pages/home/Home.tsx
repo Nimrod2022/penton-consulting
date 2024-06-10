@@ -6,7 +6,6 @@ import EnvironmentalCompliance from '../../components/services/EnvironmentalComp
 import { CurrentPage } from '../../shared/types';
 
 const Home = () => {
-
   const homeServiceBG = 'bg-[#F6F9FC]';
   return (
     <>

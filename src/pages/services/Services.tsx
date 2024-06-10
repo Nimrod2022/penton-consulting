@@ -1,8 +1,8 @@
-import Engineering from '../../components/services/Engineering';
-import EnergyCompliance from '../../components/services/EnergyCompliance';
-import EnvironmentalCompliance from '../../components/services/EnvironmentalCompliance';
 import { IoArrowForwardSharp } from 'react-icons/io5';
 
+import EnergyCompliance from '../../components/services/EnergyCompliance';
+import Engineering from '../../components/services/Engineering';
+import EnvironmentalCompliance from '../../components/services/EnvironmentalCompliance';
 
 const Services = () => {
   const ServicesBG = 'bg-white';
@@ -25,7 +25,9 @@ const Services = () => {
       <div className=" bg-[#DAEAF2] py-16 ">
         <div className="text-center py-10">
           <p className="text-[#FFA500] text-xl"> Our Services Portfolio</p>
-          <p className='font-libre text-3xl md:pb-10 pt-5'>Comprehensive Energy Solutions</p>
+          <p className="font-libre text-3xl md:pb-10 pt-5">
+            Comprehensive Energy Solutions
+          </p>
         </div>
         <div className=" md:w-5/6 xl:w-4/6 mx-auto">
           <div className="md:justify-between flex md:pb-20">

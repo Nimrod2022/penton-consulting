@@ -1,12 +1,11 @@
-
-import energyCompliance from '../../../public/assets/energy-compliance-service.svg';
 import Service from './Service';
+import energyCompliance from '../../../public/assets/energy-compliance-service.svg';
 
 type Props = {
-    bgColor: string
-}
+  bgColor: string;
+};
 
-const EnergyCompliance = ({bgColor}: Props) => {
+const EnergyCompliance = ({ bgColor }: Props) => {
   return (
     <Service
       title="Energy Regulatory Compliance"
@@ -17,6 +16,6 @@ const EnergyCompliance = ({bgColor}: Props) => {
       bgColor={bgColor}
     ></Service>
   );
-}
+};
 
-export default EnergyCompliance
+export default EnergyCompliance;
