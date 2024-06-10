@@ -1,8 +1,8 @@
 import landingImage from "../../public/assets/landing-bg.svg";
 import { CurrentPage } from "../shared/types";
 import Button from "./buttons/Button";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../app/store";
+import { useAppDispatch, useAppSelector } from "../hooks/UseApp";
+
 //import { setCurrentPage } from "../features/buttons/buttonSlice";
 
 type Props = {
@@ -14,8 +14,8 @@ type Props = {
 };
 
 const Hero = ({ border }: Props) => {
-  const dispatch = useDispatch();
-  const currentPage = useSelector((state: RootState) => state.page.page);
+  const dispatch = useAppDispatch();
+  const currentPage = useAppSelector((state) => state.page.page);
   console.log("Current page in Hero component:", currentPage);
   return (
     <section className="w-full ">
