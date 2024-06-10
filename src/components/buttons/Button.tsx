@@ -7,18 +7,13 @@ type Props = {
   targetPage: CurrentPage;
   children: React.ReactNode;
   style?: string;
-  // textColor?: string;
-  // border?: string;
-  // setCurrentPage: (value: CurrentPage) => void;
 };
 
 const Button = ({
   targetPage,
   children,
-  // setCurrentPage,
+
   style = 'bg-[#FFA500] text-black  border border-[#39FF14]',
-  // textColor = 'text-black',
-  // border = 'border border-[#39FF14]',
 }: Props) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
