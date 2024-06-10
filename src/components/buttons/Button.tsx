@@ -43,10 +43,7 @@ const Button = ({
   };
 
   return (
-    <button
-      onClick={handleClick}
-      className={`px-4 py-2 ${style}  `}
-    >
+    <button onClick={handleClick} className={`px-4 py-2 ${style}  `}>
       {children}
     </button>
   );

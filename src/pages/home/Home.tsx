@@ -1,16 +1,15 @@
-import Hero from '../../components/Hero';
-import Service from '../../components/Service';
-import engineeringService from '../../../public/assets/engineering-service.svg';
 import energyCompliance from '../../../public/assets/energy-compliance-service.svg';
+import engineeringService from '../../../public/assets/engineering-service.svg';
 import environmentService from '../../../public/assets/environment-services.svg';
 import Button from '../../components/buttons/Button';
+import Hero from '../../components/Hero';
+import Service from '../../components/Service';
 import { CurrentPage } from '../../shared/types';
-
 
 const Home = () => {
   return (
     <>
-      <section id="home" className="pt-20 w-full min-h-full ">
+      <section id="home" className="pt-20 w-full ">
         <Hero />
       </section>
       <section id="services" className="w-5/6 xl:w-4/6 mx-auto py-16">

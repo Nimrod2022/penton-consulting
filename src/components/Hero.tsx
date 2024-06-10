@@ -3,19 +3,18 @@ import landingImage from '../../public/assets/landing-bg.svg';
 import { useAppSelector } from '../hooks/UseApp';
 import { CurrentPage } from '../shared/types';
 
-//import { setCurrentPage } from "../features/buttons/buttonSlice";
 
 const Hero = () => {
   const currentPage = useAppSelector((state) => state.page.page);
   console.log('Current page in Hero component:', currentPage);
   return (
-    <section className="w-full ">
+    <section className="w-full">
       <div>
         <div>
           <img
             src={landingImage}
             alt="home"
-            className="md:pt-5 hidden md:block md:w-full h-4/6"
+            className="md:pt-5 hidden md:block md:w-full h-full"
           />
           <img
             src="../../public/assets/landing-mobile.png"
