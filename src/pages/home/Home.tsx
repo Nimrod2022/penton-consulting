@@ -57,11 +57,10 @@ const Home = () => {
           ></Service>
         </div>
 
-        <div className='py-20'>
+        <div className="py-20">
           <Button
             targetPage={CurrentPage.Services}
-            textColor="text-black px-8 text-xl"
-            border="none"
+            style="text-black px-8 text-xl border-none bg-[#FFA500] rounded-md"
           >
             See all
           </Button>

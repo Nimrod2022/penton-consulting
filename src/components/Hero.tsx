@@ -43,14 +43,13 @@ const Hero = () => {
                 </p>
               </div>
               <div className="flex pt-7 md:justify-start justify-center md:pt-5 gap-5 md:gap-10 md:w-3/6">
-                <Button targetPage={CurrentPage.Services} border="none">
+                <Button targetPage={CurrentPage.Services} style="border-none">
                   Get started
                 </Button>
                 <Button
                   targetPage={CurrentPage.Services}
-                  bgColor="bg-[#003366]"
-                  textColor="text-white"
-                  border="border border-[#39FF14]"
+                  style="bg-[#003366] text-white border border-[#39FF14]"
+                  
                 >
                   Learn more
                 </Button>

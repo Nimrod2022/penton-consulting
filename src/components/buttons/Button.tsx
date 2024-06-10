@@ -6,9 +6,9 @@ import { CurrentPage } from '../../shared/types';
 type Props = {
   targetPage: CurrentPage;
   children: React.ReactNode;
-  bgColor?: string;
-  textColor?: string;
-  border?: string;
+  style?: string;
+  // textColor?: string;
+  // border?: string;
   // setCurrentPage: (value: CurrentPage) => void;
 };
 
@@ -16,9 +16,9 @@ const Button = ({
   targetPage,
   children,
   // setCurrentPage,
-  bgColor = 'bg-[#FFA500]',
-  textColor = 'text-black',
-  border = 'border border-[#39FF14]',
+  style = 'bg-[#FFA500] text-black  border border-[#39FF14]',
+  // textColor = 'text-black',
+  // border = 'border border-[#39FF14]',
 }: Props) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -45,7 +45,7 @@ const Button = ({
   return (
     <button
       onClick={handleClick}
-      className={`px-4 py-2 ${bgColor} ${textColor} ${border} rounded-md`}
+      className={`px-4 py-2 ${style}  `}
     >
       {children}
     </button>

@@ -13,27 +13,27 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isAboveMediumScreens = UseMediaQuery('(min-width: 1060px)');
 
-useEffect(() => {
-  const handleScroll = () => {
-    const navbar = document.querySelector('.navbar');
-    if (navbar) {
-      if (window.scrollY > 0) {
-        navbar.classList.add('floating');
-      } else {
-        navbar.classList.remove('floating');
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector('.navbar');
+      if (navbar) {
+        if (window.scrollY > 0) {
+          navbar.classList.add('floating');
+        } else {
+          navbar.classList.remove('floating');
+        }
       }
-    }
-  };
+    };
 
-  // Call handleScroll once on mount to set initial state
-  handleScroll();
+    // Call handleScroll once on mount to set initial state
+    handleScroll();
 
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, []);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <header>
@@ -78,9 +78,7 @@ useEffect(() => {
               <div>
                 <Button
                   targetPage={CurrentPage.Contact}
-                  bgColor="bg-[#003366]"
-                  textColor="text-white"
-                  border="none"
+                  style="bg-[#003366] text-white border-none rounded-lg"
                 >
                   Request a Quote
                 </Button>
