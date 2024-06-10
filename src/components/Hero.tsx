@@ -5,8 +5,6 @@ import { CurrentPage } from '../shared/types';
 
 //import { setCurrentPage } from "../features/buttons/buttonSlice";
 
-
-
 const Hero = () => {
   const currentPage = useAppSelector((state) => state.page.page);
   console.log('Current page in Hero component:', currentPage);
@@ -43,7 +41,10 @@ const Hero = () => {
                 </p>
               </div>
               <div className="flex pt-7 md:justify-start justify-center md:pt-5 gap-5 md:gap-10 md:w-3/6">
-                <Button targetPage={CurrentPage.Services} style="border-none">
+                <Button
+                  targetPage={CurrentPage.Services}
+                  style="border-none bg-[#FFA500] rounded-md text-black"
+                >
                   Get started
                 </Button>
                 <Button

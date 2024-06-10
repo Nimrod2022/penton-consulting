@@ -19,10 +19,10 @@ const Home = () => {
             <h3 className="text-[#FFA500] font-semibold text-md py-5">
               Expertise
             </h3>
-            <h2 className="text-[#003366] text-3xl ">
+            <h2 className="text-[#003366] md:text-3xl ">
               Comprehensive Consulting Services for <br /> Energy Projects
             </h2>
-            <p className="w-3/6 pt-3">
+            <p className="md:w-3/6 pt-3">
               We provide a range of services to support energy projects,
               including architectural, structural, and mechanical drawings for
               gas stations and filling plants. We also offer energy regulatory
@@ -31,7 +31,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="pt-5 md:flex justify-between">
+        <div className="pt-5 md:flex md:justify-between ">
           <Service
             title="Architectural, Structural & Mechanical Drawings"
             description="We conduct thorough environmental impact assessments and audits (EIA/EA)
@@ -57,10 +57,10 @@ const Home = () => {
           ></Service>
         </div>
 
-        <div className="py-20">
+        <div className="md:py-20  py-10 flex justify-center md:justify-start ">
           <Button
             targetPage={CurrentPage.Services}
-            style="text-black px-8 text-xl border-none bg-[#FFA500] rounded-md"
+            style="text-black px-5 md:px-8 md:text-xl border-none bg-[#FFA500] rounded-md "
           >
             See all
           </Button>

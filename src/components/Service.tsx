@@ -14,13 +14,13 @@ const Service = ({ title, description, image, serviceId }: Props) => {
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </div>
       <div className="bg-[#F6F9FC] flex flex-col items-center py-4">
-        <h3 className="text-[#036] md:pt-5 md:pb-3 text md:text-xl text-center">
+        <h3 className="text-[#036] pt-3 md:pt-5 pb-3 text md:text-xl text-center">
           {title}
         </h3>
         <p className="mx-5 md:pb-5">{description}</p>
-        <div>
+        <div className='md:pt-0 pt-3'>
           <Link to={`/services/${serviceId}`}>
-            <button className="text-[#036] font-semibold  bg-[#FFA500] px-4 py-3 rounded-md">
+            <button className="text-[#036] px-2 py-2 font-semibold  bg-[#FFA500] md:px-4 md:py-3 rounded-md">
               Learn more &gt;
             </button>
           </Link>
