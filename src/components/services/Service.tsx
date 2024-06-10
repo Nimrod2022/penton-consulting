@@ -21,7 +21,7 @@ const Service = ({ title, description, image, serviceId }: Props) => {
           <p className="mx-5 md:pb-5">{description}</p>
           <div className="md:pt-0 pt-3">
             <Link to={`/services/${serviceId}`}>
-              <button className="text-[#036] px-2 py-2 font-semibold   md:px-4 md:py-3 rounded-md">
+              <button className="text-[#036] px-2 py-2 font-semibold hover:bg-[#036] hover:text-white  md:px-4 md:py-3 rounded-md">
                 Learn more &gt;
               </button>
             </Link>

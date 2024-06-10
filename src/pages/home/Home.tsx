@@ -1,9 +1,8 @@
-import energyCompliance from '../../../public/assets/energy-compliance-service.svg';
-import engineeringService from '../../../public/assets/engineering-service.svg';
-import environmentService from '../../../public/assets/environment-services.svg';
 import Button from '../../components/buttons/Button';
 import Hero from '../../components/Hero';
-import Service from '../../components/Service';
+import EnergyCompliance from '../../components/services/EnergyCompliance';
+import Engineering from '../../components/services/Engineering';
+import EnvironmentalCompliance from '../../components/services/EnvironmentalCompliance';
 import { CurrentPage } from '../../shared/types';
 
 const Home = () => {
@@ -15,7 +14,7 @@ const Home = () => {
       <section id="services" className="w-5/6 xl:w-4/6 mx-auto py-16">
         <div className="mx-auto">
           <div>
-            <h3 className="text-[#FFA500] font-semibold text-md py-5">
+            <h3 className="text-[#FFA500] font-semibold md:text-2xl py-5">
               Expertise
             </h3>
             <h2 className="text-[#003366] md:text-3xl ">
@@ -31,29 +30,9 @@ const Home = () => {
           </div>
         </div>
         <div className="pt-5 md:flex md:justify-between ">
-          <Service
-            title="Architectural, Structural & Mechanical Drawings"
-            description="We conduct thorough environmental impact assessments and audits (EIA/EA)
-           for energy projects in the oil and gas industry, as well as general projects."
-            image={engineeringService}
-            serviceId={1}
-          ></Service>
-
-          <Service
-            title="Energy Regulatory Compliance"
-            description="Ensure your energy projects meet all regulatory requirements with our comprehensive
-             compliance services, including licenses, permits, technical audits, and emergency response plans."
-            image={energyCompliance}
-            serviceId={2}
-          ></Service>
-
-          <Service
-            title="Architectural, Structural & Mechanical Drawings"
-            description="We conduct thorough environmental impact assessments and audits (EIA/EA)
-           for energy projects in the oil and gas industry, as well as general projects."
-            image={environmentService}
-            serviceId={3}
-          ></Service>
+          <Engineering />
+          <EnergyCompliance />
+          <EnvironmentalCompliance />
         </div>
 
         <div className="md:py-20  py-10 flex justify-center md:justify-start ">
