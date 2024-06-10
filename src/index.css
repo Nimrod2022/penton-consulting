@@ -30,6 +30,7 @@ body,
   border-radius: 30px; 
   padding-left: 30px; /* Adjust padding left */
   padding-right: 30px; /* Adjust padding right */
+
   margin-top: 20px;
     transition: padding-left 0.3s ease, padding-right 0.3s ease, margin-top 0.3s ease;
 

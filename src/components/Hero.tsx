@@ -5,15 +5,9 @@ import { CurrentPage } from '../shared/types';
 
 //import { setCurrentPage } from "../features/buttons/buttonSlice";
 
-type Props = {
-  targetPage?: CurrentPage;
-  children?: React.ReactNode;
-  bgColor?: string;
-  textColor?: string;
-  border?: string;
-};
 
-const Hero = ({ border }: Props) => {
+
+const Hero = () => {
   const currentPage = useAppSelector((state) => state.page.page);
   console.log('Current page in Hero component:', currentPage);
   return (
@@ -56,7 +50,7 @@ const Hero = ({ border }: Props) => {
                   targetPage={CurrentPage.Services}
                   bgColor="bg-[#003366]"
                   textColor="text-white"
-                  border={border}
+                  border="border border-[#39FF14]"
                 >
                   Learn more
                 </Button>
