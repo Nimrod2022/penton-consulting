@@ -1,21 +1,17 @@
-import { CurrentPage } from "../../shared/types";
-import { Link } from "react-router-dom";
-import logo from "/assets/logo.svg";
-import Button from "../../components/buttons/Button";
-import UseMediaQuery from "../../hooks/UseMediaQuery";
-import { useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
-import { useDispatch } from "react-redux";
-import { setCurrentPage } from "../../components/buttons/buttonSlice";
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import logo from '../../../public/assets/logo.svg';
+import Button from '../../components/buttons/Button';
+import { setCurrentPage } from '../../components/buttons/buttonSlice';
+import UseMediaQuery from '../../hooks/UseMediaQuery';
+import { CurrentPage } from '../../shared/types';
 
-type Props = {
-  currentPage: CurrentPage;
-};
-
-const Navbar = ({ currentPage }: Props) => {
+const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const dispatch = useDispatch();
-  const isAboveMediumScreens = UseMediaQuery("(min-width: 1060px)");
+  const isAboveMediumScreens = UseMediaQuery('(min-width: 1060px)');
 
   return (
     <header>

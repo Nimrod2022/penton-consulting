@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import { CurrentPage } from "../../shared/types";
-import { setCurrentPage } from "./buttonSlice";
-import { UseDispatch, useDispatch } from "react-redux";
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { setCurrentPage } from './buttonSlice';
+import { CurrentPage } from '../../shared/types';
 
 type Props = {
   targetPage: CurrentPage;
@@ -16,28 +16,28 @@ const Button = ({
   targetPage,
   children,
   // setCurrentPage,
-  bgColor = "bg-[#FFA500]",
-  textColor = "text-black",
-  border = "border border-[#39FF14]",
+  bgColor = 'bg-[#FFA500]',
+  textColor = 'text-black',
+  border = 'border border-[#39FF14]',
 }: Props) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    console.log("Navigating to:", targetPage);
+    console.log('Navigating to:', targetPage);
 
     dispatch(setCurrentPage(targetPage));
     if (targetPage === CurrentPage.Services) {
-      navigate("/services");
+      navigate('/services');
     } else if (targetPage === CurrentPage.Projects) {
-      navigate("/projects");
+      navigate('/projects');
     } else if (targetPage === CurrentPage.Contact) {
-      navigate("/contact");
+      navigate('/contact');
     } else {
-      navigate("/");
+      navigate('/');
       const element = document.getElementById(targetPage);
       if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+        element.scrollIntoView({ behavior: 'smooth' });
       }
     }
   };

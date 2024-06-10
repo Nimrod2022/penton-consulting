@@ -1,7 +1,4 @@
-
-type Props = {}
-
-const Projects = (props: Props) => {
+const Projects = () => {
   return (
     <section id="projects" className="py-20 mx-auto min-h-full w-5/6">
       <div>
@@ -10,6 +7,6 @@ const Projects = (props: Props) => {
       </div>
     </section>
   );
-}
+};
 
-export default Projects
+export default Projects;

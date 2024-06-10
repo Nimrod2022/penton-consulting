@@ -1,8 +1,4 @@
-
-
-type Props = {};
-
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <section id="contact" className="py-20 mx-auto min-h-full w-5/6">
       <div>

@@ -1,5 +1,5 @@
-import { CurrentPage } from "../../shared/types";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { CurrentPage } from '../../shared/types';
 
 type Props = {
   page: string;
@@ -14,7 +14,7 @@ const Link = ({ page, currentPage, setCurrentPage }: Props) => {
     <AnchorLink
       href={`#${lowerCasePage}`}
       className={`${
-        currentPage === lowerCasePage ? "text-[#0D65BE]" : ""
+        currentPage === lowerCasePage ? 'text-[#0D65BE]' : ''
       } hover:text-[#1E568E]`}
       onClick={() => setCurrentPage(lowerCasePage)}
     >

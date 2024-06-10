@@ -1,8 +1,6 @@
-
 export enum CurrentPage {
-  Home = "home",
-  Projects = "projects",
-  Services = "services",
-  Contact = "contact",
+  Home = 'home',
+  Projects = 'projects',
+  Services = 'services',
+  Contact = 'contact',
 }
-

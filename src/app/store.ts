@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
 
-import buttonSlice from "../components/buttons/buttonSlice";
+import { buttonSlice } from '../components/buttons/buttonSlice';
 
 export const store = configureStore({
   reducer: {
-    page: buttonSlice,
+    page: buttonSlice.reducer,
   },
 });
 

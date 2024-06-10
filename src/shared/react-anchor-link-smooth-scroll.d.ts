@@ -1,5 +1,5 @@
-declare module "react-anchor-link-smooth-scroll" {
-  import { AnchorHTMLAttributes, DetailedHTMLProps } from "react";
+declare module 'react-anchor-link-smooth-scroll' {
+  import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
 
   interface AnchorLinkProps
     extends DetailedHTMLProps<
