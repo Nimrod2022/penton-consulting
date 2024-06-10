@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { CurrentPage } from "../shared/types";
-import { setCurrentPage } from "../features/buttons/buttonSlice";
+import { CurrentPage } from "../../shared/types";
+import { setCurrentPage } from "./buttonSlice";
 import { UseDispatch, useDispatch } from "react-redux";
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
   children: React.ReactNode;
   bgColor?: string;
   textColor?: string;
-  border?: string
+  border?: string;
   // setCurrentPage: (value: CurrentPage) => void;
 };
 
@@ -18,13 +18,13 @@ const Button = ({
   // setCurrentPage,
   bgColor = "bg-[#FFA500]",
   textColor = "text-black",
-  border= "border border-[#39FF14]"
+  border = "border border-[#39FF14]",
 }: Props) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    console.log("Navigating to:", targetPage); 
+    console.log("Navigating to:", targetPage);
 
     dispatch(setCurrentPage(targetPage));
     if (targetPage === CurrentPage.Services) {

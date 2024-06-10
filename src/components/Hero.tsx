@@ -1,7 +1,7 @@
 import landingImage from "../../public/assets/landing-bg.svg";
 import { CurrentPage } from "../shared/types";
-import Button from "./Button";
-import {  useDispatch, useSelector } from "react-redux";
+import Button from "./buttons/Button";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../app/store";
 //import { setCurrentPage } from "../features/buttons/buttonSlice";
 
@@ -15,8 +15,8 @@ type Props = {
 
 const Hero = ({ border }: Props) => {
   const dispatch = useDispatch();
-  const currentPage = useSelector((state: RootState) => state.page.page)
-   console.log("Current page in Hero component:", currentPage);
+  const currentPage = useSelector((state: RootState) => state.page.page);
+  console.log("Current page in Hero component:", currentPage);
   return (
     <section className="w-full ">
       <div>
@@ -49,10 +49,7 @@ const Hero = ({ border }: Props) => {
               </p>
             </div>
             <div className="flex pt-7 md:justify-start justify-center md:pt-5 gap-5 md:gap-10 md:w-3/6">
-              <Button
-                targetPage={CurrentPage.Services}
-                border="none"
-              >
+              <Button targetPage={CurrentPage.Services} border="none">
                 Get started
               </Button>
               <Button
