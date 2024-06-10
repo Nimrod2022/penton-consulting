@@ -5,16 +5,17 @@ import Button from "../../components/Button";
 import UseMediaQuery from "../../hooks/UseMediaQuery";
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/16/solid";
+import { useDispatch } from "react-redux";
+import { setCurrentPage } from "../../features/buttons/buttonSlice";
 
 type Props = {
   currentPage: CurrentPage;
 
-  setCurrentPage: (value: CurrentPage) => void;
 };
 
-const Navbar = ({ currentPage, setCurrentPage }: Props) => {
+const Navbar = ({ currentPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-
+const dispatch = useDispatch()
   const isAboveMediumScreens = UseMediaQuery("(min-width: 1060px)");
 
   return (
@@ -24,29 +25,35 @@ const Navbar = ({ currentPage, setCurrentPage }: Props) => {
           {isAboveMediumScreens ? (
             <div className="mx-auto w-5/6 flex items-center justify-between">
               <div>
-                <Link to="/" onClick={() => setCurrentPage(CurrentPage.Home)}>
+                <Link
+                  to="/"
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
+                >
                   <img src={logo} alt="logo" />
                 </Link>
               </div>
               <div className=" flex  gap-10 text-md">
-                <Link to="/" onClick={() => setCurrentPage(CurrentPage.Home)}>
+                <Link
+                  to="/"
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
+                >
                   Home
                 </Link>
                 <Link
                   to="/services"
-                  onClick={() => setCurrentPage(CurrentPage.Services)}
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Services))}
                 >
                   Services
                 </Link>
                 <Link
                   to="/projects"
-                  onClick={() => setCurrentPage(CurrentPage.Projects)}
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Projects))}
                 >
                   Projects
                 </Link>
                 <Link
                   to="/contact"
-                  onClick={() => setCurrentPage(CurrentPage.Contact)}
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Contact))}
                 >
                   Contact
                 </Link>
@@ -54,7 +61,6 @@ const Navbar = ({ currentPage, setCurrentPage }: Props) => {
               <div>
                 <Button
                   targetPage={CurrentPage.Contact}
-                  setCurrentPage={setCurrentPage}
                   bgColor="bg-[#003366]"
                   textColor="text-white"
                   border="none"
@@ -99,24 +105,27 @@ const Navbar = ({ currentPage, setCurrentPage }: Props) => {
 
             <div className="fixed inset-0 bg-[#1E568E] bg-opacity-20 z-40 h-screen drop-shadow-xl">
               <div className="flex flex-col text-xl justify-center h-full duration-300 ease-in-out items-center gap-5">
-                <Link to="/" onClick={() => setCurrentPage(CurrentPage.Home)}>
+                <Link
+                  to="/"
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
+                >
                   Home
                 </Link>
                 <Link
                   to="/services"
-                  onClick={() => setCurrentPage(CurrentPage.Services)}
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Services))}
                 >
                   Services
                 </Link>
                 <Link
                   to="/projects"
-                  onClick={() => setCurrentPage(CurrentPage.Projects)}
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Services))}
                 >
                   Projects
                 </Link>
                 <Link
                   to="/contact"
-                  onClick={() => setCurrentPage(CurrentPage.Contact)}
+                  onClick={() => dispatch(setCurrentPage(CurrentPage.Contact))}
                 >
                   Contact
                 </Link>

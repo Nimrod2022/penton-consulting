@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { CurrentPage } from "../shared/types";
+import { setCurrentPage } from "../features/buttons/buttonSlice";
+import { UseDispatch, useDispatch } from "react-redux";
 
 type Props = {
   targetPage: CurrentPage;
@@ -7,21 +9,24 @@ type Props = {
   bgColor?: string;
   textColor?: string;
   border?: string
-  setCurrentPage: (value: CurrentPage) => void;
+  // setCurrentPage: (value: CurrentPage) => void;
 };
 
 const Button = ({
   targetPage,
   children,
-  setCurrentPage,
+  // setCurrentPage,
   bgColor = "bg-[#FFA500]",
   textColor = "text-black",
   border= "border border-[#39FF14]"
 }: Props) => {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+  const dispatch = useDispatch();
 
   const handleClick = () => {
-    setCurrentPage(targetPage);
+    console.log("Navigating to:", targetPage); 
+
+    dispatch(setCurrentPage(targetPage));
     if (targetPage === CurrentPage.Services) {
       navigate("/services");
     } else if (targetPage === CurrentPage.Projects) {
