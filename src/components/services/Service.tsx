@@ -44,7 +44,7 @@ const Service = ({ title, bgColor, description, image, serviceId }: Props) => {
           <h3 className="text-[#036] pt-3 md:pt-5 pb-3 text-center md:text-xl">
             {title}
           </h3>
-          <p className="mx-5 md:pb-5 text-center">{description}</p>
+          <p className="mx-5 md:pb-5 ">{description}</p>
           <div className="md:pt-0 pt-3">
             <Link to={`/services/${serviceId}`}>
               <button className="text-[#036] px-2 py-2 font-semibold hover:bg-[#036] hover:text-white md:px-4 md:py-3 rounded-md">

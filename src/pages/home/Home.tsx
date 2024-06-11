@@ -62,7 +62,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="md:flex gap-x-10 justify-between mx-auto md:pb-20">
+          <div className="md:flex gap-x-10 justify-between mx-auto md:pb-20  grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             <div>
               <Operations
                 image={safetyOperation}
@@ -116,7 +116,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className='md:pb-20'>
+      <section className="md:pb-20">
         <div
           className={`bg-cover w-full bg-[url("../../../public/assets/services-bg.svg")] md:py-20 services-bg`}
         >
