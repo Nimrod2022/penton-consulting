@@ -111,8 +111,30 @@ const Home = () => {
               service in the industry.
             </p>
           </div>
-          <div className='md:py-20'>
+          <div className="md:py-20">
             <img src={oilRig} alt="rig" />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div
+          className={`bg-cover w-full bg-[url("../../../public/assets/services-bg.svg")] md:py-20 services-bg`}
+        >
+          <h4 className=" text-white text-center text-xl md:pb-3 font-libre">
+            Expert Consulting Services for You
+          </h4>
+          <div className="text-center md:text-xl justify-center items-center md:gap-2 text-white">
+            <p className="text-[#C6D1DD] text-md md:pb-10">
+              Contact us today for professional consultations and competitive
+              quotes.
+            </p>
+
+            <Button
+              style="rounded-md border-none bg-[#FFA500] text-black "
+              targetPage={CurrentPage.Contact}
+            >
+              Contact Us
+            </Button>
           </div>
         </div>
       </section>
