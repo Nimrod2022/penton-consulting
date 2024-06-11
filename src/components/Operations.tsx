@@ -14,7 +14,7 @@ const Operations = ({ image, title, description }: Props) => {
 
     <div className="bg-[#0E4379] md:w-full md:max-w-[380px] md:min-h-[450px] md:h-auto flex flex-col md:px-5 md:py-10 items-center ">
       <img src={image} alt={title} className="" />
-      <h3 className="text-xl py-5 text-center">{title}</h3>
+      <h3 className="text-xl py-3 text-center">{title}</h3>
       <p className="text-[#DBE3EB] text-center">{description}</p>
     </div>
   );

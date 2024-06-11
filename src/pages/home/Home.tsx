@@ -8,6 +8,7 @@ import environmentOperation from '../../../public/assets/environmental-complianc
 import safetyOperation from '../../../public/assets/safety-compliance.svg';
 import quotesOperation from '../../../public/assets/quotes.svg';
 import oilRig from '../../../public/assets/oil-rig.svg';
+import FAQS from '../../components/FAQS';
 
 import { CurrentPage } from '../../shared/types';
 
@@ -135,6 +136,33 @@ const Home = () => {
             >
               Contact Us
             </Button>
+          </div>
+        </div>
+      </section>
+      <section className="w-5/6 xl:w-4/6 mx-auto">
+        <div className="flex  justify-between">
+          <div>
+            <h3 className="md:text-2xl ">Common</h3>
+            <p className="md:w-[80%] md:py-5">
+              Find answers to frequently asked questions about our consulting
+              services in the oil and gas industry, regulatory compliance, and
+              environmental assessments. If you have any further questions,
+              kindly contact us.
+            </p>
+
+            <Button
+              style="rounded-md border-none bg-[#FFA500] text-black "
+              targetPage={CurrentPage.Contact}
+            >
+              Contact Us
+            </Button>
+          </div>
+
+          <div>
+            <p className="text-2xl lg:ml-[36px]  xl:ml-[48px] font-bold">
+              Freaquently Asked Questions
+            </p>
+            <FAQS />
           </div>
         </div>
       </section>
