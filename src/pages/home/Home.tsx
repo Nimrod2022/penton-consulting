@@ -19,7 +19,7 @@ const Home = () => {
       <section id="home" className="pt-20 w-full ">
         <Hero />
       </section>
-      <section id="services" className="w-5/6 xl:w-4/6 mx-auto py-16">
+      <section id="services" className="w-5/6 xl:w-4/6 mx-auto py-8 md:py-16">
         <div className="mx-auto">
           <div>
             <h3 className="text-[#FFA500] font-semibold md:text-2xl py-5">
@@ -37,13 +37,13 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="pt-5 md:flex gap-10 md:justify-between ">
+        <div className="pt-5 md:flex md:gap-10 md:justify-between ">
           <Engineering bgColor={homeServiceBG} />
           <EnergyCompliance bgColor={homeServiceBG} />
           <EnvironmentalCompliance bgColor={homeServiceBG} />
         </div>
 
-        <div className="pt-20 flex justify-center md:justify-start ">
+        <div className="md:pt-20 pt-10 flex justify-center md:justify-start ">
           <Button
             targetPage={CurrentPage.Services}
             style="text-black px-5 md:px-8 md:text-xl border-none bg-[#FFA500] rounded-md "
@@ -55,15 +55,15 @@ const Home = () => {
       <section className="w-full bg-[#036]">
         <div className="w-5/6 xl:w-4/6 mx-auto text-white">
           <div className="flex justify-center items-center ">
-            <div className="w-[40%]">
-              <h3 className="text-center py-20 md:text-3xl">
+            <div className="md:w-[40%]">
+              <h3 className="text-center py-10 md:py-20 text-xl md:text-3xl">
                 Streamline your operations with our Technical Audits and
                 Compliance Services
               </h3>
             </div>
           </div>
 
-          <div className="md:flex gap-x-10 justify-between mx-auto md:pb-20  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+          <div className="md:flex gap-y-10 md:gap-x-10 md:justify-between mx-auto pb-10 md:pb-20  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <Operations
                 image={safetyOperation}
@@ -95,14 +95,14 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className=" w-5/6 xl:w-4/6 mx-auto md:py-20">
+      <section className=" w-5/6 xl:w-4/6 mx-auto py-10 md:py-20">
         <div>
-          <div className="flex  justify-between gap-10">
-            <p className="text-3xl text-[#003366]">
+          <div className="md:flex  justify-between gap-10">
+            <p className="md:text-3xl text-xl text-[#003366]">
               Providing top-quality consulting services for the oil and gas
               sector.
             </p>
-            <p className="w-5/6">
+            <p className="md:w-5/6">
               Our company is dedicated to delivering expert solutions in
               architectural, structural, and mechanical drawings for oil and gas
               projects. We also specialize in energy regulatory compliance,
@@ -112,7 +112,7 @@ const Home = () => {
               service in the industry.
             </p>
           </div>
-          <div className="md:py-20">
+          <div className="py-10 md:py-20">
             <img src={oilRig} alt="rig" />
           </div>
         </div>
@@ -140,7 +140,7 @@ const Home = () => {
         </div>
       </section>
       <section className="w-5/6 xl:w-4/6 mx-auto">
-        <div className="flex  justify-between">
+        <div className="md:flex  md:justify-between">
           <div>
             <h3 className="md:text-2xl ">Common</h3>
             <p className="md:w-[80%] md:py-5">

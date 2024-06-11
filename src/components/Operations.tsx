@@ -12,10 +12,10 @@ const Operations = ({ image, title, description }: Props) => {
     //   <p className="text-[#DBE3EB]">{description}</p>
     // </div>
 
-    <div className="bg-[#0E4379] md:w-full md:max-w-[380px] md:min-h-[450px] md:h-auto flex flex-col md:px-5 md:py-10 items-center ">
-      <img src={image} alt={title} className="" />
-      <h3 className="text-xl py-3 text-center">{title}</h3>
-      <p className="text-[#DBE3EB] text-center">{description}</p>
+    <div className="bg-[#0E4379] md:w-full md:max-w-[380px] md:min-h-[450px] md:h-auto flex flex-col md:px-5 py-5 md:py-10 items-center px-5 ">
+      <img src={image} alt={title} className="size-10 md:size-auto" />
+      <h3 className="md:text-xl py-3 text-center">{title}</h3>
+      <p className="text-[#DBE3EB] text-sm md:text-md">{description}</p>
     </div>
   );
 };
