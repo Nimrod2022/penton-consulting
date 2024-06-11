@@ -7,6 +7,7 @@ import EnvironmentalCompliance from '../../components/services/EnvironmentalComp
 import environmentOperation from '../../../public/assets/environmental-compliance.svg';
 import safetyOperation from '../../../public/assets/safety-compliance.svg';
 import quotesOperation from '../../../public/assets/quotes.svg';
+import oilRig from '../../../public/assets/oil-rig.svg';
 
 import { CurrentPage } from '../../shared/types';
 
@@ -90,6 +91,28 @@ const Home = () => {
                 a range of competitive quotations that are customized to perfectly meet your specific needs and requirements."
               />
             </div>
+          </div>
+        </div>
+      </section>
+      <section className=" w-5/6 xl:w-4/6 mx-auto md:py-20">
+        <div>
+          <div className="flex  justify-between gap-10">
+            <p className="text-3xl text-[#003366]">
+              Providing top-quality consulting services for the oil and gas
+              sector.
+            </p>
+            <p className="w-5/6">
+              Our company is dedicated to delivering expert solutions in
+              architectural, structural, and mechanical drawings for oil and gas
+              projects. We also specialize in energy regulatory compliance,
+              environmental impact assessments, and offering quotations for
+              general works. With a focus on excellence and customer
+              satisfaction, we are committed to providing the highest level of
+              service in the industry.
+            </p>
+          </div>
+          <div className='md:py-20'>
+            <img src={oilRig} alt="rig" />
           </div>
         </div>
       </section>
