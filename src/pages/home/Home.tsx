@@ -1,8 +1,13 @@
 import Button from '../../components/buttons/Button';
 import Hero from '../../components/Hero';
+import Operations from '../../components/Operations';
 import EnergyCompliance from '../../components/services/EnergyCompliance';
 import Engineering from '../../components/services/Engineering';
 import EnvironmentalCompliance from '../../components/services/EnvironmentalCompliance';
+import environmentOperation from '../../../public/assets/environmental-compliance.svg';
+import safetyOperation from '../../../public/assets/safety-compliance.svg';
+import quotesOperation from '../../../public/assets/quotes.svg';
+
 import { CurrentPage } from '../../shared/types';
 
 const Home = () => {
@@ -36,13 +41,56 @@ const Home = () => {
           <EnvironmentalCompliance bgColor={homeServiceBG} />
         </div>
 
-        <div className="md:py-20  py-10 flex justify-center md:justify-start ">
+        <div className="pt-20 flex justify-center md:justify-start ">
           <Button
             targetPage={CurrentPage.Services}
             style="text-black px-5 md:px-8 md:text-xl border-none bg-[#FFA500] rounded-md "
           >
             See all
           </Button>
+        </div>
+      </section>
+      <section className="w-full bg-[#036]">
+        <div className="w-5/6 xl:w-4/6 mx-auto text-white">
+          <div className="flex justify-center items-center ">
+            <div className="w-[40%]">
+              <h3 className="text-center py-20 md:text-3xl">
+                Streamline your operations with our Technical Audits and
+                Compliance Services
+              </h3>
+            </div>
+          </div>
+
+          <div className="flex justify-between md:pb-20">
+            <div>
+              <Operations
+                image={safetyOperation}
+                title="Ensure regulatory compliance with our Licenses and Permits Acquisition"
+                description="Our dedicated team of experienced experts is committed to working closely with you 
+                to develop a comprehensive and effective Emergency Response Plan that is tailored to your specific
+                 needs and requirements."
+              />
+            </div>
+
+            <div>
+              <Operations
+                image={environmentOperation}
+                title="Mitigate environmental risks with our Environmental Impact Assessments and Audits"
+                description="We specialize in providing comprehensive EIA/EA 
+                services for various energy and oil & gas projects, including but not limited to feasibility studies,
+                impact mitigation strategies, stakeholder engagements and regulatory compliance assessements"
+              />
+            </div>
+
+            <div>
+              <Operations
+                image={quotesOperation}
+                title="Get accurate quotations for your general engineering and energy works"
+                description="Our dedicated team of experienced professionals is committed to providing you with 
+                a range of competitive quotations that are customized to perfectly meet your specific needs and requirements."
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>
