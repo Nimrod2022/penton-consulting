@@ -1,7 +1,7 @@
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../public/assets/logo.svg';
 import Button from '../../components/buttons/Button';
 import { setCurrentPage } from '../../components/buttons/buttonSlice';
@@ -12,6 +12,7 @@ const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const dispatch = useDispatch();
   const isAboveMediumScreens = UseMediaQuery('(min-width: 1060px)');
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +36,11 @@ const Navbar = () => {
     };
   }, []);
 
+// change nav item text on click
+  const getLinkClass = (path: string) => {
+    return location.pathname === path ? 'text-[#0D65BE]' : '';
+  }
+
   return (
     <header>
       <nav>
@@ -53,24 +59,28 @@ const Navbar = () => {
                 <Link
                   to="/"
                   onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
+                  className={getLinkClass('/')}
                 >
                   Home
                 </Link>
                 <Link
                   to="/services"
                   onClick={() => dispatch(setCurrentPage(CurrentPage.Services))}
+                  className={getLinkClass('/services')}
                 >
                   Services
                 </Link>
                 <Link
                   to="/projects"
                   onClick={() => dispatch(setCurrentPage(CurrentPage.Projects))}
+                  className={getLinkClass('/projects')}
                 >
                   Projects
                 </Link>
                 <Link
                   to="/contact"
                   onClick={() => dispatch(setCurrentPage(CurrentPage.Contact))}
+                  className={getLinkClass('/contact')}
                 >
                   Contact
                 </Link>
