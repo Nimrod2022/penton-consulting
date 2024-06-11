@@ -35,7 +35,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <div className="pt-5 md:flex md:justify-between ">
+        <div className="pt-5 md:flex gap-10 md:justify-between ">
           <Engineering bgColor={homeServiceBG} />
           <EnergyCompliance bgColor={homeServiceBG} />
           <EnvironmentalCompliance bgColor={homeServiceBG} />
@@ -61,7 +61,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex justify-between md:pb-20">
+          <div className="md:flex gap-x-10 justify-between mx-auto md:pb-20">
             <div>
               <Operations
                 image={safetyOperation}

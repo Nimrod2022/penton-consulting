@@ -30,12 +30,12 @@ const Services = () => {
           </p>
         </div>
         <div className=" md:w-5/6 xl:w-4/6 mx-auto">
-          <div className="md:justify-between flex md:pb-20">
+          <div className="md:justify-between md:flex gap-10 md:pb-20">
             <Engineering bgColor={ServicesBG} />
             <EnergyCompliance bgColor={ServicesBG} />
             <EnvironmentalCompliance bgColor={ServicesBG} />
           </div>
-          <div className="flex md:justify-between md:pb-10">
+          <div className="md:flex  gap-10 md:justify-between md:pb-10">
             <EnergyCompliance bgColor={ServicesBG} />
             <EnvironmentalCompliance bgColor={ServicesBG} />
             <EnvironmentalCompliance bgColor={ServicesBG} />
