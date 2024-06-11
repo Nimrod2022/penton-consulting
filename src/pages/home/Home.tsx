@@ -116,7 +116,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section className='md:pb-20'>
         <div
           className={`bg-cover w-full bg-[url("../../../public/assets/services-bg.svg")] md:py-20 services-bg`}
         >

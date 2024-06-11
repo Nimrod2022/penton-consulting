@@ -12,7 +12,7 @@ const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const dispatch = useDispatch();
   const isAboveMediumScreens = UseMediaQuery('(min-width: 1060px)');
-  const location = useLocation()
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,10 +36,10 @@ const Navbar = () => {
     };
   }, []);
 
-// change nav item text on click
+  // change nav item text on click
   const getLinkClass = (path: string) => {
     return location.pathname === path ? 'text-[#0D65BE]' : '';
-  }
+  };
 
   return (
     <header>

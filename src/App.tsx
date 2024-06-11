@@ -5,6 +5,7 @@ import Navbar from './pages/navbar/Navbar';
 import Projects from './pages/projects/Projects';
 import Services from './pages/services/Services';
 import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
 
 function App() {
   // const currentPage = useSelector((state: RootState) => state.page.page);
@@ -19,6 +20,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
