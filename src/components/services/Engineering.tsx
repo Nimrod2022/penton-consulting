@@ -3,7 +3,7 @@ import engineeringService from '../../../public/assets/engineering-service.svg';
 
 type Props = {
   bgColor: string;
-  index: number
+  index: number;
 };
 
 const Engineering = ({ bgColor, index }: Props) => {

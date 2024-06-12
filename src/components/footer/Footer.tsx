@@ -1,9 +1,9 @@
 import { AiOutlineMail } from 'react-icons/ai';
 import { HiLocationMarker } from 'react-icons/hi';
 import { PiPhoneCallLight } from 'react-icons/pi';
-import Button from '../buttons/Button';
 import logo from '../../../public/assets/logo.svg';
 import { CurrentPage } from '../../shared/types';
+import Button from '../buttons/Button';
 
 const Footer = () => {
   return (

@@ -3,7 +3,7 @@ import energyCompliance from '../../../public/assets/energy-compliance-service.s
 
 type Props = {
   bgColor: string;
-  index: number
+  index: number;
 };
 
 const EnergyCompliance = ({ bgColor, index }: Props) => {

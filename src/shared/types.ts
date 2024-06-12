@@ -5,5 +5,4 @@ export enum CurrentPage {
   Contact = 'contact',
 }
 
-
 export const TOGGLE_ANIMATION = 'TOGGLE_ANIMATION';

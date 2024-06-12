@@ -1,17 +1,16 @@
-import environmentOperation from '../../../../public/assets/environmental-compliance.svg';
-import oilRig from '../../../../public/assets/oil-rig.svg'
-import quotesOperation from '../../../../public/assets/quotes.svg';
-import safetyOperation from '../../../../public/assets/safety-compliance.svg';
-import Button from '../../buttons/Button';
 import FAQS from './sections/FAQS';
 import Hero from './sections/Hero';
 import Operations from './sections/Operations';
+import environmentOperation from '../../../../public/assets/environmental-compliance.svg';
+import oilRig from '../../../../public/assets/oil-rig.svg';
+import quotesOperation from '../../../../public/assets/quotes.svg';
+import safetyOperation from '../../../../public/assets/safety-compliance.svg';
+import { CurrentPage } from '../../../shared/types';
+import Button from '../../buttons/Button';
 import EnergyCompliance from '../../services/EnergyCompliance';
 import Engineering from '../../services/Engineering';
 import EnvironmentalCompliance from '../../services/EnvironmentalCompliance';
 // import {motion} from 'framer-motion'
-
-import { CurrentPage } from '../../../shared/types';
 
 const Home = () => {
   const homeServiceBG = 'bg-[#F6F9FC]';
@@ -72,7 +71,6 @@ const Home = () => {
                 description="Our dedicated team of experienced experts is committed to working closely with you 
                 to develop a comprehensive and effective Emergency Response Plan that is tailored to your specific
                  needs and requirements."
-
                 index={0}
               />
             </div>

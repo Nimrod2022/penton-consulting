@@ -2,8 +2,8 @@ import Service from './Service';
 import environmentService from '../../../public/assets/environment-services.svg';
 
 type Props = {
-  bgColor: string,
-  index: number
+  bgColor: string;
+  index: number;
 };
 
 const EnvironmentalCompliance = ({ bgColor, index }: Props) => {

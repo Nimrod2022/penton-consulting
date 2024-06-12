@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-
+import { Link } from 'react-router-dom';
 
 // const container = {
 //   hidden: {},
@@ -15,10 +14,17 @@ type Props = {
   image: string;
   serviceId: number;
   bgColor: string;
-  index: number,
+  index: number;
 };
 
-const Service = ({ title, bgColor, description, image, serviceId, index }: Props) => {
+const Service = ({
+  title,
+  bgColor,
+  description,
+  image,
+  serviceId,
+  index,
+}: Props) => {
   return (
     <motion.div
       className="flex flex-col justify-between w-full md:w-1/3 p-4"
