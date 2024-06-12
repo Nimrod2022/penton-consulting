@@ -1,7 +1,7 @@
-import Button from './buttons/Button';
+import Button from '../../../buttons/Button';
 import landingImage from '../../public/assets/landing-bg.svg';
-import { useAppSelector } from '../hooks/UseApp';
-import { CurrentPage } from '../shared/types';
+import { useAppSelector } from '../../../../hooks/UseApp';
+import { CurrentPage } from '../../../../shared/types';
 
 const Hero = () => {
   const currentPage = useAppSelector((state) => state.page.page);

@@ -3,9 +3,10 @@ import energyCompliance from '../../../public/assets/energy-compliance-service.s
 
 type Props = {
   bgColor: string;
+  index: number
 };
 
-const EnergyCompliance = ({ bgColor }: Props) => {
+const EnergyCompliance = ({ bgColor, index }: Props) => {
   return (
     <Service
       title="Energy Regulatory Compliance"
@@ -14,6 +15,7 @@ const EnergyCompliance = ({ bgColor }: Props) => {
       image={energyCompliance}
       serviceId={2}
       bgColor={bgColor}
+      index={index}
     ></Service>
   );
 };

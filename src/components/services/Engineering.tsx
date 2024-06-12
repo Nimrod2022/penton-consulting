@@ -3,9 +3,10 @@ import engineeringService from '../../../public/assets/engineering-service.svg';
 
 type Props = {
   bgColor: string;
+  index: number
 };
 
-const Engineering = ({ bgColor }: Props) => {
+const Engineering = ({ bgColor, index }: Props) => {
   return (
     <Service
       title="Architectural, Structural & Mechanical Drawings"
@@ -14,6 +15,7 @@ const Engineering = ({ bgColor }: Props) => {
       image={engineeringService}
       serviceId={1}
       bgColor={bgColor}
+      index={index}
     ></Service>
   );
 };

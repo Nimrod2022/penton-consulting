@@ -1,8 +1,8 @@
 import { IoArrowForwardSharp } from 'react-icons/io5';
 
-import EnergyCompliance from '../../components/services/EnergyCompliance';
-import Engineering from '../../components/services/Engineering';
-import EnvironmentalCompliance from '../../components/services/EnvironmentalCompliance';
+import EnergyCompliance from '../../services/EnergyCompliance';
+import Engineering from '../../services/Engineering';
+import EnvironmentalCompliance from '../../services/EnvironmentalCompliance';
 
 const Services = () => {
   const ServicesBG = 'bg-white';
@@ -31,14 +31,14 @@ const Services = () => {
         </div>
         <div className=" md:w-5/6 xl:w-4/6 mx-auto">
           <div className="md:justify-between md:flex gap-10 md:pb-20">
-            <Engineering bgColor={ServicesBG} />
-            <EnergyCompliance bgColor={ServicesBG} />
-            <EnvironmentalCompliance bgColor={ServicesBG} />
+            <Engineering bgColor={ServicesBG} index={0}/>
+            <EnergyCompliance bgColor={ServicesBG} index={1}/>
+            <EnvironmentalCompliance bgColor={ServicesBG} index={2}/>
           </div>
           <div className="md:flex  gap-10 md:justify-between md:pb-10">
-            <EnergyCompliance bgColor={ServicesBG} />
-            <EnvironmentalCompliance bgColor={ServicesBG} />
-            <EnvironmentalCompliance bgColor={ServicesBG} />
+            <EnergyCompliance bgColor={ServicesBG} index={3}/>
+            <EnvironmentalCompliance bgColor={ServicesBG} index={4} />
+            <EnvironmentalCompliance bgColor={ServicesBG} index={5}/>
           </div>
         </div>
       </div>

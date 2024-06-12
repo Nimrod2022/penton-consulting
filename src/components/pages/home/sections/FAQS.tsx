@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import faqsData from '../shared/FaqsData';
+import faqsData from '../../../../shared/FaqsData';
 
 const FAQs: React.FC = () => {
   const [faqs, setFaqs] = useState(faqsData);

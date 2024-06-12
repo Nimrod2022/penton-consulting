@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import Contact from './pages/contact/Contact';
-import Home from './pages/home/Home';
-import Navbar from './pages/navbar/Navbar';
-import Projects from './pages/projects/Projects';
-import Services from './pages/services/Services';
+import Footer from './components/footer/Footer';
+import ScrollToTop from './components/pages/ScrollToTop';
+import Contact from './components/pages/contact/Contact';
+import Home from './components/pages/home/Home';
+import Navbar from './components/pages/navbar/Navbar';
+import Projects from './components/pages/projects/Projects';
+import Services from './components/pages/services/Services';
+
 
 function App() {
   // const currentPage = useSelector((state: RootState) => state.page.page);

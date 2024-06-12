@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setCurrentPage } from './buttonSlice';
+import { setCurrentPage } from '../../reducers/buttonSlice';
 import { CurrentPage } from '../../shared/types';
 
 type Props = {

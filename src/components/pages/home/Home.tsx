@@ -2,15 +2,16 @@ import environmentOperation from '../../../public/assets/environmental-complianc
 import oilRig from '../../../public/assets/oil-rig.svg';
 import quotesOperation from '../../../public/assets/quotes.svg';
 import safetyOperation from '../../../public/assets/safety-compliance.svg';
-import Button from '../../components/buttons/Button';
-import FAQS from '../../components/FAQS';
-import Hero from '../../components/Hero';
-import Operations from '../../components/Operations';
-import EnergyCompliance from '../../components/services/EnergyCompliance';
-import Engineering from '../../components/services/Engineering';
-import EnvironmentalCompliance from '../../components/services/EnvironmentalCompliance';
+import Button from '../../buttons/Button';
+import FAQS from './sections/FAQS';
+import Hero from './sections/Hero';
+import Operations from './sections/Operations';
+import EnergyCompliance from '../../services/EnergyCompliance';
+import Engineering from '../../services/Engineering';
+import EnvironmentalCompliance from '../../services/EnvironmentalCompliance';
+// import {motion} from 'framer-motion'
 
-import { CurrentPage } from '../../shared/types';
+import { CurrentPage } from '../../../shared/types';
 
 const Home = () => {
   const homeServiceBG = 'bg-[#F6F9FC]';
@@ -38,9 +39,9 @@ const Home = () => {
           </div>
         </div>
         <div className="pt-5 md:flex md:gap-10 md:justify-between ">
-          <Engineering bgColor={homeServiceBG} />
-          <EnergyCompliance bgColor={homeServiceBG} />
-          <EnvironmentalCompliance bgColor={homeServiceBG} />
+          <Engineering bgColor={homeServiceBG} index={0} />
+          <EnergyCompliance bgColor={homeServiceBG} index={1} />
+          <EnvironmentalCompliance bgColor={homeServiceBG} index={2} />
         </div>
 
         <div className="md:pt-20 pt-10 flex justify-center md:justify-start ">
@@ -71,6 +72,8 @@ const Home = () => {
                 description="Our dedicated team of experienced experts is committed to working closely with you 
                 to develop a comprehensive and effective Emergency Response Plan that is tailored to your specific
                  needs and requirements."
+
+                index={0}
               />
             </div>
 
@@ -81,6 +84,7 @@ const Home = () => {
                 description="We specialize in providing comprehensive EIA/EA 
                 services for various energy and oil & gas projects, including but not limited to feasibility studies,
                 impact mitigation strategies, stakeholder engagements and regulatory compliance assessements"
+                index={1}
               />
             </div>
 
@@ -90,6 +94,7 @@ const Home = () => {
                 title="Get accurate quotations for your general engineering and energy works"
                 description="Our dedicated team of experienced professionals is committed to providing you with 
                 a range of competitive quotations that are customized to perfectly meet your specific needs and requirements."
+                index={2}
               />
             </div>
           </div>

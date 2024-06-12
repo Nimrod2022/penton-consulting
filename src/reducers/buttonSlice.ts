@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { CurrentPage } from '../../shared/types';
+import { CurrentPage } from '../shared/types';
 
 const initialState = {
   page: CurrentPage.Home,

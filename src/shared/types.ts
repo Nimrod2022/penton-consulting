@@ -4,3 +4,6 @@ export enum CurrentPage {
   Services = 'services',
   Contact = 'contact',
 }
+
+
+export const TOGGLE_ANIMATION = 'TOGGLE_ANIMATION';

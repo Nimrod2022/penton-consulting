@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../../public/assets/logo.svg';
 import Button from '../../components/buttons/Button';
-import { setCurrentPage } from '../../components/buttons/buttonSlice';
+import { setCurrentPage } from '../../reducers/buttonSlice';
 import UseMediaQuery from '../../hooks/UseMediaQuery';
 import { CurrentPage } from '../../shared/types';
 
