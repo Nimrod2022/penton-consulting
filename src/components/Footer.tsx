@@ -1,11 +1,9 @@
-import logo from '../../public/assets/logo.svg';
-import { CurrentPage } from '../shared/types';
-import Button from './buttons/Button';
-import { PiPhoneCallLight } from 'react-icons/pi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { HiLocationMarker } from 'react-icons/hi';
-
-
+import { PiPhoneCallLight } from 'react-icons/pi';
+import Button from './buttons/Button';
+import logo from '../../public/assets/logo.svg';
+import { CurrentPage } from '../shared/types';
 
 const Footer = () => {
   return (
@@ -33,7 +31,7 @@ const Footer = () => {
 
             <div className="text-white flex items-center gap-3 text-md pt-5">
               <HiLocationMarker className="size-8" />
-             
+
               <p>Ruiru, Kenya</p>
             </div>
           </div>

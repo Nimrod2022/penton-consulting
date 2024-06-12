@@ -34,11 +34,7 @@ const Service = ({ title, bgColor, description, image, serviceId }: Props) => {
     <div className="flex flex-col justify-between w-full md:w-1/3 p-4">
       <Link to={`/services/${serviceId}`} className="flex flex-col h-full">
         <div className="flex-grow">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover"
-          />
+          <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
         <div className={`${bgColor} flex flex-col items-center py-4`}>
           <h3 className="text-[#036] pt-3 md:pt-5 pb-3 text-center md:text-xl">

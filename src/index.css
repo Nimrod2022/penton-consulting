@@ -49,7 +49,6 @@ body,
       101.331% 342.011%;
 }
 
-
 .faqs {
   width: 100%;
   /* max-width: 768px; */
@@ -73,7 +72,7 @@ body,
 }
 
 .faqs .faq .faq-question::after {
-  content: "+";
+  content: '+';
   position: absolute;
   top: 50%;
   right: 0px;
@@ -95,7 +94,7 @@ body,
 }
 
 .faqs .faq.open .faq-question::after {
-  content: "-";
+  content: '-';
 }
 
 .faqs .faq.open .faq-answer {

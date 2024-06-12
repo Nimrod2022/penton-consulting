@@ -1,14 +1,14 @@
+import environmentOperation from '../../../public/assets/environmental-compliance.svg';
+import oilRig from '../../../public/assets/oil-rig.svg';
+import quotesOperation from '../../../public/assets/quotes.svg';
+import safetyOperation from '../../../public/assets/safety-compliance.svg';
 import Button from '../../components/buttons/Button';
+import FAQS from '../../components/FAQS';
 import Hero from '../../components/Hero';
 import Operations from '../../components/Operations';
 import EnergyCompliance from '../../components/services/EnergyCompliance';
 import Engineering from '../../components/services/Engineering';
 import EnvironmentalCompliance from '../../components/services/EnvironmentalCompliance';
-import environmentOperation from '../../../public/assets/environmental-compliance.svg';
-import safetyOperation from '../../../public/assets/safety-compliance.svg';
-import quotesOperation from '../../../public/assets/quotes.svg';
-import oilRig from '../../../public/assets/oil-rig.svg';
-import FAQS from '../../components/FAQS';
 
 import { CurrentPage } from '../../shared/types';
 

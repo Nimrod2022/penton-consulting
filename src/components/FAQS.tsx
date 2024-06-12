@@ -1,7 +1,7 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import faqsData from '../shared/FaqsData';
 
-const FAQs = () => {
+const FAQs: React.FC = () => {
   const [faqs, setFaqs] = useState(faqsData);
 
   const toggleFAQ = (index: number) => {
@@ -16,6 +16,15 @@ const FAQs = () => {
     );
   };
 
+  const handleKeyPress = (
+    event: React.KeyboardEvent<HTMLDivElement>,
+    index: number
+  ) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      toggleFAQ(index);
+    }
+  };
+
   return (
     <div className="App">
       <div className="faqs">
@@ -24,6 +33,10 @@ const FAQs = () => {
             className={'faq ' + (faq.open ? 'open' : '')}
             key={index}
             onClick={() => toggleFAQ(index)}
+            onKeyPress={(event) => handleKeyPress(event, index)}
+            tabIndex={0}
+            role="button"
+            aria-expanded={faq.open ? 'true' : 'false'}
           >
             <div className="faq-question">{faq.question}</div>
             <div className="faq-answer">{faq.answer}</div>
