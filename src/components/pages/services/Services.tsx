@@ -22,8 +22,8 @@ const Services = () => {
         </div>
       </div>
 
-      <div className=" bg-[#DAEAF2] py-16 ">
-        <div className="text-center py-10">
+      <div className=" bg-[#DAEAF2] py-10 ">
+        <div className="text-center py-5">
           <p className="text-[#FFA500] text-xl"> Our Services Portfolio</p>
           <p className="font-libre text-3xl md:pb-10 pt-5">
             Comprehensive Energy Solutions

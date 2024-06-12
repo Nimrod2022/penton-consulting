@@ -1,5 +1,5 @@
 import Button from '../../../buttons/Button';
-import landingImage from '../../public/assets/landing-bg.svg';
+import landingImage from '../../../../../public/assets/landing-bg.svg';
 import { useAppSelector } from '../../../../hooks/UseApp';
 import { CurrentPage } from '../../../../shared/types';
 

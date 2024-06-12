@@ -1,6 +1,5 @@
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { CurrentPage } from '../../shared/types';
-
+import { CurrentPage } from '../../../shared/types';
 type Props = {
   page: string;
   currentPage: CurrentPage;

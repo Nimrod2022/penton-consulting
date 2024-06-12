@@ -2,12 +2,11 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../../../public/assets/logo.svg';
-import Button from '../../components/buttons/Button';
-import { setCurrentPage } from '../../reducers/buttonSlice';
-import UseMediaQuery from '../../hooks/UseMediaQuery';
-import { CurrentPage } from '../../shared/types';
-
+import logo from '../../../../public/assets/logo.svg'
+import Button from '../../buttons/Button';
+import { setCurrentPage } from '../../../reducers/buttonSlice';
+import UseMediaQuery from '../../../hooks/UseMediaQuery';
+import { CurrentPage } from '../../../shared/types';
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const dispatch = useDispatch();
