@@ -1,5 +1,4 @@
 import { IoArrowForwardSharp } from 'react-icons/io5';
-
 import EnergyCompliance from '../../services/EnergyCompliance';
 import Engineering from '../../services/Engineering';
 import EnvironmentalCompliance from '../../services/EnvironmentalCompliance';
@@ -30,7 +29,7 @@ const Services = () => {
           </p>
         </div>
         <div className=" md:w-5/6 xl:w-4/6 mx-auto">
-          <div className="md:justify-between md:flex gap-10 md:pb-20">
+          <div className="md:justify-between md:flex gap-10 md:pb-10">
             <Engineering bgColor={ServicesBG} index={0} />
             <EnergyCompliance bgColor={ServicesBG} index={1} />
             <EnvironmentalCompliance bgColor={ServicesBG} index={2} />
