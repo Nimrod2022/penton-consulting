@@ -12,7 +12,7 @@ type Props = {
   title: string;
   description: string;
   image: string;
-  serviceId: number;
+  serviceId: string;
   bgColor: string;
   index: number;
 };

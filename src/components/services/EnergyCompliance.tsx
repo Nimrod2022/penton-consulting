@@ -13,7 +13,7 @@ const EnergyCompliance = ({ bgColor, index }: Props) => {
       description="Ensure your energy projects meet all regulatory requirements with our comprehensive
              compliance services, including licenses, permits, technical audits, and emergency response plans."
       image={energyCompliance}
-      serviceId={2}
+      serviceId={"energy"}
       bgColor={bgColor}
       index={index}
     ></Service>

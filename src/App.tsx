@@ -6,6 +6,10 @@ import Navbar from './components/pages/navbar/Navbar';
 import Projects from './components/pages/projects/Projects';
 import ScrollToTop from './components/pages/ScrollToTop';
 import Services from './components/pages/services/Services';
+import DetailedEngineering from './components/pages/services/detailed/DetailedEngineering';
+import DetailedEnvironment from './components/pages/services/detailed/DetailedEnvironment';
+import DetailedEnergy from './components/pages/services/detailed/DetailedEnergy';
+import DetailedQuotations from './components/pages/services/detailed/DetailedQuotations';
 
 function App() {
   // const currentPage = useSelector((state: RootState) => state.page.page);
@@ -17,6 +21,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/engineering" element={<DetailedEngineering />} />
+        <Route path="/services/environment" element={<DetailedEnvironment />} />
+        <Route path="/services/energy" element={<DetailedEnergy />} />
+        <Route path="/services/quotations" element={<DetailedQuotations/>} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

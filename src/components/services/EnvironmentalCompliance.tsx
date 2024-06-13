@@ -13,7 +13,7 @@ const EnvironmentalCompliance = ({ bgColor, index }: Props) => {
       description="We conduct thorough environmental impact assessments and audits (EIA/EA)
            for energy projects in the oil and gas industry, as well as general projects."
       image={environmentService}
-      serviceId={3}
+      serviceId={"environment"}
       bgColor={bgColor}
       index={index}
     ></Service>
