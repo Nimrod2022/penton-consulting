@@ -1,4 +1,4 @@
-import { TEInput, TERipple, TETextarea } from 'tw-elements-react';
+import { TEInput, TETextarea } from 'tw-elements-react';
 
 const QuickContact = () => {
   return (
@@ -26,14 +26,12 @@ const QuickContact = () => {
           />
         </div>
 
-        <TERipple rippleColor="light" className="w-full">
-          <button
-            type="button"
-            className="inline-block w-full bg-[#FFA500] px-6 pb-2 pt-2.5 text-xs font-medium text-md leading-normal text-black "
-          >
-            Send message
-          </button>
-        </TERipple>
+        <button
+          type="button"
+          className=" w-full bg-[#FFA500] px-6 pb-2 pt-2.5 text-xs font-medium text-md  text-black "
+        >
+          Send message
+        </button>
       </form>
     </div>
   );
