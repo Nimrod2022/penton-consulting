@@ -21,7 +21,7 @@ const DetailedEnergy = () => {
         </div>
         <div className="w-5/6 xl:w-4/6 mx-auto bg-[#DAEAF2] py-20">
           {/* left menu */}
-          <div className="w-[25%] flex flex-col gap-10">
+          <div className="w-[30%] flex flex-col gap-10">
             <div>
               <DetailedButton />
             </div>
