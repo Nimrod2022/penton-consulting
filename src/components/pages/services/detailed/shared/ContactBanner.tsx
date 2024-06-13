@@ -3,7 +3,7 @@ import callCenter from '../../../../../../public/assets/call-center.svg';
 const ContactBanner = () => {
   return (
     <div
-      className={`bg-cover bg-center text-xl font-libre bg-no-repeat w-full h-80 flex justify-center text-white items-center bg-[url('../../../../../public/assets/contact-banner.svg')] `}
+      className={`bg-cover bg-center text-xl font-libre bg-no-repeat w-full h-80 flex justify-center text-white items-center bg-[url("../../../../../public/assets/contact-banner.svg")] `}
     >
       <div className="items-center  justify-center">
         <h1 className="pb-8 ">Need Any Help?</h1>
