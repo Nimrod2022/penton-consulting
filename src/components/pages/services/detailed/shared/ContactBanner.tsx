@@ -1,8 +1,6 @@
-import callCenter from '../../../../../../public/assets/call-center.svg'
+import callCenter from '../../../../../../public/assets/call-center.svg';
 
-type Props = {}
-
-const ContactBanner = (props: Props) => {
+const ContactBanner = () => {
   return (
     <div
       className={`bg-cover bg-center text-xl font-libre bg-no-repeat w-full h-80 flex justify-center text-white items-center bg-[url('../../../../public/assets/contact-banner.svg')] `}
@@ -19,6 +17,6 @@ const ContactBanner = (props: Props) => {
       </div>
     </div>
   );
-}
+};
 
-export default ContactBanner
+export default ContactBanner;

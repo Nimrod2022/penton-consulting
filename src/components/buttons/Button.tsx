@@ -7,7 +7,7 @@ type Props = {
   targetPage: CurrentPage;
   children: React.ReactNode;
   style?: string;
-  activeStyle?: string
+  activeStyle?: string;
 };
 
 const Button = ({

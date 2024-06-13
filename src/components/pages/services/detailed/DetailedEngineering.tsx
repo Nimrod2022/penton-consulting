@@ -1,13 +1,11 @@
 import { IoArrowForwardSharp } from 'react-icons/io5';
 import ContactBanner from './shared/ContactBanner';
-import QuickContact from './shared/QuickContact';
 import DetailedButton from './shared/DetailedButton';
+import QuickContact from './shared/QuickContact';
 import serviceImage from '../../../../../public/assets/engineering-detailed-image.svg';
 import FAQS from '../../home/sections/FAQS';
 
-type Props = {};
-
-const DetailedEngineering = (props: Props) => {
+const DetailedEngineering = () => {
   return (
     <section className="pt-28">
       <div className="w-full bg-[#DAEAF2] ">
@@ -44,7 +42,7 @@ const DetailedEngineering = (props: Props) => {
 
             <p className=" pb-10">
               In the dynamic world of energy, staying compliant with all
-              regulations is not just about legal requirement—it's a strategic
+              regulations is not just about legal requirement—it is strategic
               imperative. At Penton, we specialize in guiding companies through
               the maze of licenses, permits, technical audits, and emergency
               response planning. Our expert team ensures that your energy

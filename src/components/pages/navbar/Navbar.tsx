@@ -51,7 +51,7 @@ const Navbar = () => {
                   to="/"
                   onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
                 >
-                  <img src={logo} alt="logo"  />
+                  <img src={logo} alt="logo" />
                 </Link>
               </div>
               <div className=" flex  gap-10 text-md">

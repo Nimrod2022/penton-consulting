@@ -1,8 +1,6 @@
 import { TEInput, TERipple, TETextarea } from 'tw-elements-react';
 
-type Props = {};
-
-const QuickContact = (props: Props) => {
+const QuickContact = () => {
   return (
     <div className="block max-w-sm font-libre text-black bg-[#E3F2FA] p-6 border-2 border-[#858686]">
       <h1 className="text-2xl pb-5">Quick Contact</h1>

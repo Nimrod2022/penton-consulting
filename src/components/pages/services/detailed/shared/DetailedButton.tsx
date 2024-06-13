@@ -1,9 +1,7 @@
-import Button from "../../../../buttons/Button"
-import { CurrentPage } from "../../../../../shared/types";
+import { CurrentPage } from '../../../../../shared/types';
+import Button from '../../../../buttons/Button';
 
-type Props = {}
-
-const DetailedButton = (props: Props) => {
+const DetailedButton = () => {
   return (
     <div className="border-2 border-[#858686] pb-10 text-md px-3">
       <h1 className="text-xl text-start py-5 text-black font-libre">
@@ -46,6 +44,6 @@ const DetailedButton = (props: Props) => {
       </div>
     </div>
   );
-}
+};
 
-export default DetailedButton
+export default DetailedButton;

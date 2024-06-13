@@ -1,11 +1,9 @@
 import { IoArrowForwardSharp } from 'react-icons/io5';
 import ContactBanner from './shared/ContactBanner';
-import QuickContact from './shared/QuickContact';
 import DetailedButton from './shared/DetailedButton';
+import QuickContact from './shared/QuickContact';
 
-type Props = {};
-
-const DetailedEnergy = (props: Props) => {
+const DetailedEnergy = () => {
   return (
     <section className="pt-28">
       <div className="w-full bg-[#DAEAF2] ">
