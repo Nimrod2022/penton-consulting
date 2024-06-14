@@ -1,30 +1,75 @@
-# React + TypeScript + Vite
+# Penton Energy Consulting Limited
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of Content:
 
-Currently, two official plugins are available:
+- [About](#about)
+- [Live link](#about)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Status](#status)
+- [Credits](#credits)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## About
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Pyraus is Kenyan based a tech start-up that offers software solutions to its clients.
 
-- Configure the top-level `parserOptions` property like this:
+## Live link
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+Access site at [Penton Consulting](https://penton-consulting.vercel.app/)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Screenshots
+
+<img src="https://drive.google.com/uc?export=view&id=1V1BHVIXyzrdrVM_PE8PF7Sqj79uzl4Cw" alt="Alt Text" width="50%" height="60%">
+
+
+<!-- <img src="https://drive.google.com/uc?export=view&id=1ZFtUmyeG6tjo0LhGp4CnzRWAq7KG_01Q" alt="Alt Text" width="45%" height="50%">  <img src="https://drive.google.com/uc?export=view&id=1vycbBTt3Evs6d0UwBhcoN93jN1JlwNf6" alt="Alt Text" width="45%" height="50%">
+
+<img src="https://drive.google.com/uc?export=view&id=1pDRtla2L05MU1vw_-BYiFWj0VGCLKwr3" alt="Alt Text" width="45%" height="50%">  <img src="https://drive.google.com/uc?export=view&id=1_GRBBMVueIWACb1b8lwnPILs0z0ySJ2Z" alt="Alt Text" width="45%" height="50%">
+
+-->
+
+
+
+## Technologies
+ ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/TypeScript_Logo_%28Blue%29.svg/2560px-TypeScript_Logo_%28Blue%29.svg.png" alt="Alt Text" width="10%" height="5%">  
+
+## Setup
+- Download or clone the repository
+- run `npm install`
+- run `npm run dev`
+
+
+## Status
+
+ Project is  `50%` complete.
+
+## Credits
+List of contriubutors:
+- [Nimrod Kibet - Front-End Developer](kibetnimrod.com)
+- [Rodgers Mkolwe - Web Designer](https://dribbble.com/mkolwey)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
