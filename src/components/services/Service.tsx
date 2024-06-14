@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-// const container = {
-//   hidden: {},
-//   visible: {
-//     transition: { staggerChildren: 0.2 },
-//   },
-// };
-
 type Props = {
   title: string;
   description: string;
