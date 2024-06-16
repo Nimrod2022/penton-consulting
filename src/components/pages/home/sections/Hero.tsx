@@ -2,7 +2,7 @@ import landingImage from '../../../../../public/assets/landing-bg.svg';
 import { useAppSelector } from '../../../../hooks/UseApp';
 import { CurrentPage } from '../../../../shared/types';
 import Button from '../../../buttons/Button';
-import landingImageMobile from "../../public/assets/landing-mobile.png"
+import landingImageMobile from '../../../../../public/assets/landing-mobile.png';
 
 const Hero = () => {
   const currentPage = useAppSelector((state) => state.page.page);
