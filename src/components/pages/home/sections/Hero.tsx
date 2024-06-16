@@ -2,6 +2,7 @@ import landingImage from '../../../../../public/assets/landing-bg.svg';
 import { useAppSelector } from '../../../../hooks/UseApp';
 import { CurrentPage } from '../../../../shared/types';
 import Button from '../../../buttons/Button';
+import landingImageMobile from "../../public/assets/landing-mobile.png"
 
 const Hero = () => {
   const currentPage = useAppSelector((state) => state.page.page);
@@ -16,7 +17,7 @@ const Hero = () => {
             className="md:pt-5 hidden md:block md:w-full"
           />
           <img
-            src="../../public/assets/landing-mobile.png"
+            src={landingImageMobile}
             alt="home"
             className="md:pt-5 md:hidden block md:w-full h-4/6"
           />
