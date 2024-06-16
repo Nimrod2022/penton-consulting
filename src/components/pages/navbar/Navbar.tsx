@@ -7,6 +7,7 @@ import UseMediaQuery from '../../../hooks/UseMediaQuery';
 import { setCurrentPage } from '../../../reducers/buttonSlice';
 import { CurrentPage } from '../../../shared/types';
 import Button from '../../buttons/Button';
+
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const dispatch = useDispatch();
@@ -43,7 +44,7 @@ const Navbar = () => {
   return (
     <header>
       <nav>
-        <div className="w-full  fixed top-0 font-libre text-[#1E1E1E] ">
+        <div className="w-full fixed top-0 font-libre text-[#1E1E1E] z-50">
           {isAboveMediumScreens ? (
             <div className="mx-auto bg-white navbar md:w-5/6 xl:w-4/6 flex items-center justify-between">
               <div>
@@ -54,7 +55,7 @@ const Navbar = () => {
                   <img src={logo} alt="logo" />
                 </Link>
               </div>
-              <div className=" flex  gap-10 text-md">
+              <div className="flex gap-10 text-md">
                 <Link
                   to="/"
                   onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
@@ -94,69 +95,76 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            <div className="flex items-center">
-              <div>
-                <Link to="/" onClick={() => setCurrentPage(CurrentPage.Home)}>
-                  <img
-                    src={logo}
-                    alt="logo"
-                    className="h-16 fixed left-5 top- "
-                  />
-                </Link>
-              </div>
-              <div>
-                <button
-                  aria-label="Toggle Menu"
-                  className="rounded-full bg-[#003366] fixed right-5 top-0 z-40  p-2 my-4"
-                  onClick={() => setIsMenuToggled(!isMenuToggled)}
-                >
-                  <Bars3Icon className="size-6 text-white" />
-                </button>
+            <div className="px-5">
+              <div className="flex navbar justify-between">
+                <div>
+                  <Link to="/" onClick={() => setCurrentPage(CurrentPage.Home)}>
+                    <img src={logo} alt="logo" className="h-16" />
+                  </Link>
+                </div>
+                <div className="">
+                  {!isMenuToggled ? (
+                    <button
+                      aria-label="Toggle Menu"
+                      className="rounded-full bg-[#003366] z-40 p-2 my-4"
+                      onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    >
+                      <Bars3Icon className="size-6 text-white" />
+                    </button>
+                  ) : (
+                    <button
+                      aria-label="Toggle Menu"
+                      onClick={() => setIsMenuToggled(!isMenuToggled)}
+                      className="rounded-full bg-[#003366] z-50  my-4"
+                      style={{ position: 'relative' }}
+                    >
+                      <XMarkIcon className="size-10 text-rose-400" />
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
           )}
         </div>
         {!isAboveMediumScreens && isMenuToggled && (
           // Mobile Menu
-          <div className="navbar bg-white top-0 fixed">
+          <div className=" top-0 fixed   z-40">
             <div className="relative">
-              <button
-                aria-label="Toggle Menu"
-                onClick={() => setIsMenuToggled(!isMenuToggled)}
-                className="fixed top-4 right-5 bg-[#003366] rounded-full z-50"
-              >
-                <XMarkIcon className="size-10 text-rose-400" />
-              </button>
-
-              <div className="fixed inset-0 bg-[#1E568E] bg-opacity-20 z-40 h-screen drop-shadow-xl">
-                <div className="flex flex-col text-xl justify-center h-full duration-300 ease-in-out items-center gap-5">
+              <div className="fixed inset-0 z-30 h-screen drop-shadow-xl">
+                <div className="flex flex-col text-xl justify-center bg-blue-50 pt-20 h-[50%] duration-300 ease-in-out items-center gap-5 ">
                   <Link
                     to="/"
-                    onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
+                    onClick={() => {
+                      setIsMenuToggled(false);
+                      dispatch(setCurrentPage(CurrentPage.Home));
+                    }}
                   >
                     Home
                   </Link>
                   <Link
                     to="/services"
-                    onClick={() =>
-                      dispatch(setCurrentPage(CurrentPage.Services))
-                    }
+                    onClick={() => {
+                      setIsMenuToggled(false);
+                      dispatch(setCurrentPage(CurrentPage.Services));
+                    }}
                   >
                     Services
                   </Link>
                   <Link
                     to="/projects"
-                    onClick={() =>
-                      dispatch(setCurrentPage(CurrentPage.Services))
-                    }
+                    onClick={() => {
+                      setIsMenuToggled(false);
+                      dispatch(setCurrentPage(CurrentPage.Services));
+                    }}
                   >
                     Projects
                   </Link>
                   <Link
                     to="/contact"
-                    onClick={() =>
-                      dispatch(setCurrentPage(CurrentPage.Contact))
-                    }
+                    onClick={() => {
+                      setIsMenuToggled(false);
+                      dispatch(setCurrentPage(CurrentPage.Contact));
+                    }}
                   >
                     Contact
                   </Link>

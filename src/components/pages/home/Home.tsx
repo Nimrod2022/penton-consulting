@@ -122,13 +122,13 @@ const Home = () => {
       </section>
       <section className="md:pb-20">
         <div
-          className={`bg-cover w-full bg-[url("../../../public/assets/services-bg.svg")] md:py-20 services-bg`}
+          className={`md:px-0 px-5 bg-cover w-full bg-[url("../../../public/assets/services-bg.svg")] py-10 md:py-20 services-mobile-bg md:services-bg`}
         >
-          <h4 className=" text-white text-center text-xl md:pb-3 font-libre">
+          <h4 className=" text-white text-center text-xl pb-3 font-libre">
             Expert Consulting Services for You
           </h4>
           <div className="text-center md:text-xl justify-center items-center md:gap-2 text-white">
-            <p className="text-[#C6D1DD] text-md md:pb-10">
+            <p className="text-[#C6D1DD] text-md pb-5 md:pb-10">
               Contact us today for professional consultations and competitive
               quotes.
             </p>
@@ -142,11 +142,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="w-5/6 xl:w-4/6 mx-auto">
+      <section className="w-full md:w-5/6 xl:w-4/6 mx-auto">
         <div className="md:flex  md:justify-between">
-          <div>
-            <h3 className="md:text-2xl ">Common</h3>
-            <p className="md:w-[80%] md:py-5">
+          <div className="px-5 md:px-0">
+            <h3 className="md:text-2xl text-xl font-semibold md:pt-0 pt-5">
+              Common
+            </h3>
+            <p className="md:w-[80%] py-5">
               Find answers to frequently asked questions about our consulting
               services in the oil and gas industry, regulatory compliance, and
               environmental assessments. If you have any further questions,
@@ -162,7 +164,7 @@ const Home = () => {
           </div>
 
           <div>
-            <p className="text-2xl lg:ml-[36px]  xl:ml-[48px] font-bold">
+            <p className="text-xl md:text-2xl text-center lg:ml-[36px] md:pt-0 pt-10 xl:ml-[48px] font-bold">
               Freaquently Asked Questions
             </p>
             <FAQS />

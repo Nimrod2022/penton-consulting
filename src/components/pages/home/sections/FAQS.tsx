@@ -38,7 +38,9 @@ const FAQs: React.FC = () => {
             role="button"
             aria-expanded={faq.open ? 'true' : 'false'}
           >
-            <div className="faq-question">{faq.question}</div>
+            <div className="faq-question md:text-xl text-md">
+              {faq.question}
+            </div>
             <div className="faq-answer">{faq.answer}</div>
           </div>
         ))}
