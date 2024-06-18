@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <p className="md:text-white text-[#FFA500] md:text-xl font-semibold">
+          <p className=" text-[#FFA500] md:text-xl font-semibold">
             Get in Touch
           </p>
 
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
 
         <div className="text-white pt-5 md:pt-0">
-          <p className="md:text-xl md:text-white text-[#FFA500] font-semibold">
+          <p className="md:text-xl  text-[#FFA500] font-semibold">
             Quick Links
           </p>
           <div className="flex flex-col">
