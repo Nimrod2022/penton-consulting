@@ -2,6 +2,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
+import Dropdown from './Dropdown';
 import logo from '../../../../public/assets/logo.svg';
 import UseMediaQuery from '../../../hooks/UseMediaQuery';
 import { setCurrentPage } from '../../../reducers/buttonSlice';
@@ -11,6 +12,7 @@ import Button from '../../buttons/Button';
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState<number | null>(null);
   const dispatch = useDispatch();
   const isAboveMediumScreens = UseMediaQuery('(min-width: 1060px)');
   const location = useLocation();
@@ -27,7 +29,6 @@ const Navbar = () => {
       }
     };
 
-    handleScroll();
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -38,6 +39,35 @@ const Navbar = () => {
   const getLinkClass = (path: string) => {
     return location.pathname === path ? 'text-[#0D65BE]' : '';
   };
+
+  const handleMouseEnter = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const timeoutId = window.setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 200); // Adjust the delay as needed
+    setDropdownTimeout(timeoutId);
+  };
+
+  const renderLink = (
+    path: string,
+    label: string,
+    currentPage: CurrentPage
+  ) => (
+    <Link
+      to={path}
+      onClick={() => dispatch(setCurrentPage(currentPage))}
+      className={getLinkClass(path)}
+    >
+      {label}
+    </Link>
+  );
 
   return (
     <header>
@@ -54,17 +84,11 @@ const Navbar = () => {
                 </Link>
               </div>
               <div className="flex gap-10 text-md">
-                <Link
-                  to="/"
-                  onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
-                  className={getLinkClass('/')}
-                >
-                  Home
-                </Link>
+                {renderLink('/', 'Home', CurrentPage.Home)}
                 <div
                   className="relative"
-                  onMouseEnter={() => setIsDropdownOpen(true)}
-                  onMouseLeave={() => setIsDropdownOpen(false)}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <Link
                     to="/services"
@@ -90,58 +114,14 @@ const Navbar = () => {
                     </svg>
                   </Link>
                   {isDropdownOpen && (
-                    <div
-                      className="absolute left-0 w-48 py-2 mt-2 bg-white border rounded shadow-lg"
-                      onMouseEnter={() => setIsDropdownOpen(true)}
-                      onMouseLeave={() => setIsDropdownOpen(false)}
-                    >
-                      <Link
-                        to="/services/service1"
-                        onClick={() => {
-                          dispatch(setCurrentPage(CurrentPage.Services));
-                          setIsDropdownOpen(false);
-                        }}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
-                      >
-                        Service 1
-                      </Link>
-                      <Link
-                        to="/services/service2"
-                        onClick={() => {
-                          dispatch(setCurrentPage(CurrentPage.Services));
-                          setIsDropdownOpen(false);
-                        }}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
-                      >
-                        Service 2
-                      </Link>
-                      <Link
-                        to="/services/service3"
-                        onClick={() => {
-                          dispatch(setCurrentPage(CurrentPage.Services));
-                          setIsDropdownOpen(false);
-                        }}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
-                      >
-                        Service 3
-                      </Link>
-                    </div>
+                    <Dropdown
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    />
                   )}
                 </div>
-                <Link
-                  to="/projects"
-                  onClick={() => dispatch(setCurrentPage(CurrentPage.Projects))}
-                  className={getLinkClass('/projects')}
-                >
-                  Projects
-                </Link>
-                <Link
-                  to="/contact"
-                  onClick={() => dispatch(setCurrentPage(CurrentPage.Contact))}
-                  className={getLinkClass('/contact')}
-                >
-                  Contact
-                </Link>
+                {renderLink('/projects', 'Projects', CurrentPage.Projects)}
+                {renderLink('/contact', 'Contact', CurrentPage.Contact)}
               </div>
               <div>
                 <Button
@@ -163,25 +143,18 @@ const Navbar = () => {
                     <img src={logo} alt="logo" className="h-16" />
                   </Link>
                 </div>
-                <div className="">
-                  {!isMenuToggled ? (
-                    <button
-                      aria-label="Toggle Menu"
-                      className="rounded-full bg-[#003366] z-40 p-2 my-4"
-                      onClick={() => setIsMenuToggled(!isMenuToggled)}
-                    >
+                <div>
+                  <button
+                    aria-label="Toggle Menu"
+                    className="rounded-full bg-[#003366] z-40 p-2 my-4"
+                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                  >
+                    {!isMenuToggled ? (
                       <Bars3Icon className="size-6 text-white" />
-                    </button>
-                  ) : (
-                    <button
-                      aria-label="Toggle Menu"
-                      onClick={() => setIsMenuToggled(!isMenuToggled)}
-                      className="rounded-full bg-[#003366] z-50 my-4"
-                      style={{ position: 'relative' }}
-                    >
+                    ) : (
                       <XMarkIcon className="size-10 text-rose-400" />
-                    </button>
-                  )}
+                    )}
+                  </button>
                 </div>
               </div>
             </div>
@@ -192,42 +165,10 @@ const Navbar = () => {
             <div className="relative">
               <div className="fixed inset-0 z-30 h-screen drop-shadow-xl">
                 <div className="flex flex-col text-xl justify-center bg-blue-50 pt-20 h-[50%] duration-300 ease-in-out items-center gap-5">
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      setIsMenuToggled(false);
-                      dispatch(setCurrentPage(CurrentPage.Home));
-                    }}
-                  >
-                    Home
-                  </Link>
-                  <Link
-                    to="/services"
-                    onClick={() => {
-                      setIsMenuToggled(false);
-                      dispatch(setCurrentPage(CurrentPage.Services));
-                    }}
-                  >
-                    Services
-                  </Link>
-                  <Link
-                    to="/projects"
-                    onClick={() => {
-                      setIsMenuToggled(false);
-                      dispatch(setCurrentPage(CurrentPage.Projects));
-                    }}
-                  >
-                    Projects
-                  </Link>
-                  <Link
-                    to="/contact"
-                    onClick={() => {
-                      setIsMenuToggled(false);
-                      dispatch(setCurrentPage(CurrentPage.Contact));
-                    }}
-                  >
-                    Contact
-                  </Link>
+                  {renderLink('/', 'Home', CurrentPage.Home)}
+                  {renderLink('/services', 'Services', CurrentPage.Services)}
+                  {renderLink('/projects', 'Projects', CurrentPage.Projects)}
+                  {renderLink('/contact', 'Contact', CurrentPage.Contact)}
                 </div>
               </div>
             </div>
