@@ -1,14 +1,14 @@
-import { AiOutlineMail } from 'react-icons/ai';
+import {
+  AiOutlineMail,
+  AiFillTwitterCircle,
+  AiFillTikTok,
+} from 'react-icons/ai';
+import { FaFacebook } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa6';
 import { HiLocationMarker } from 'react-icons/hi';
 import { PiPhoneCallLight } from 'react-icons/pi';
 import eclipseBig from '../../../../public/assets/contact-eclipse-big.svg';
 import eclipseSmall from '../../../../public/assets/contact-eclipse-small.svg';
-import { AiFillTwitterCircle } from 'react-icons/ai';
-import { FaInstagram } from 'react-icons/fa6';
-import { AiFillTikTok } from 'react-icons/ai';
-import { FaFacebook } from 'react-icons/fa';
-
-
 
 const Form = () => {
   return (
@@ -66,9 +66,9 @@ const Form = () => {
             Get in <span className="text-[#FFA500]">Touch</span>
           </h1>
           <h3 className="md:text-md text-sm text-white">
-            We'd love to hear from you! Whether you have a question about our
-            services, need assistance, or you're in the neighborhood and want to
-            check in, feel free to reach out.
+            We&apos;d love to hear from you! Whether you have a question about
+            our services, need assistance, or you&apos;re in the neighborhood
+            and want to check in, feel free to reach out.
           </h3>
           <form
             action="#"

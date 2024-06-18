@@ -1,6 +1,5 @@
 import FAQS from './sections/FAQS';
 import Hero from './sections/Hero';
-import Form from '../contact/Form';
 import Operations from './sections/Operations';
 import environmentOperation from '../../../../public/assets/environmental-compliance.svg';
 import oilRig from '../../../../public/assets/oil-rig.svg';
@@ -11,6 +10,7 @@ import Button from '../../buttons/Button';
 import EnergyCompliance from '../../services/EnergyCompliance';
 import Engineering from '../../services/Engineering';
 import EnvironmentalCompliance from '../../services/EnvironmentalCompliance';
+import Form from '../contact/Form';
 // import {motion} from 'framer-motion'
 
 const Home = () => {
@@ -170,12 +170,10 @@ const Home = () => {
             </p>
             <FAQS />
           </div>
-
-        
         </div>
       </section>
       <section>
-        <Form/>
+        <Form />
       </section>
     </>
   );
