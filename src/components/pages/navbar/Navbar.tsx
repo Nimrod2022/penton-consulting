@@ -152,7 +152,7 @@ const Navbar = () => {
                     {!isMenuToggled ? (
                       <Bars3Icon className="size-6 text-white" />
                     ) : (
-                      <XMarkIcon className="size-10 text-rose-400" />
+                      <XMarkIcon className="size-6 text-rose-400" />
                     )}
                   </button>
                 </div>
@@ -164,7 +164,10 @@ const Navbar = () => {
           <div className="top-0 fixed z-40">
             <div className="relative">
               <div className="fixed inset-0 z-30 h-screen drop-shadow-xl">
-                <div className="flex flex-col text-xl justify-center bg-blue-50 pt-20 h-[50%] duration-300 ease-in-out items-center gap-5">
+                <div
+                  className="flex flex-col text-xl justify-center bg-blue-50 pt-20 h-[50%] duration-300 ease-in-out items-center gap-5"
+                  onClick={() => setIsMenuToggled(false)}
+                >
                   {renderLink('/', 'Home', CurrentPage.Home)}
                   {renderLink('/services', 'Services', CurrentPage.Services)}
                   {renderLink('/projects', 'Projects', CurrentPage.Projects)}
