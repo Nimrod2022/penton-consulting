@@ -1,5 +1,6 @@
 import FAQS from './sections/FAQS';
 import Hero from './sections/Hero';
+import Form from '../contact/Form';
 import Operations from './sections/Operations';
 import environmentOperation from '../../../../public/assets/environmental-compliance.svg';
 import oilRig from '../../../../public/assets/oil-rig.svg';
@@ -169,7 +170,12 @@ const Home = () => {
             </p>
             <FAQS />
           </div>
+
+        
         </div>
+      </section>
+      <section>
+        <Form/>
       </section>
     </>
   );
