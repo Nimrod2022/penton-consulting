@@ -68,7 +68,9 @@ const Navbar = () => {
                 >
                   <Link
                     to="/services"
-                    onClick={() => dispatch(setCurrentPage(CurrentPage.Services))}
+                    onClick={() =>
+                      dispatch(setCurrentPage(CurrentPage.Services))
+                    }
                     className={`${getLinkClass('/services')} flex items-center`}
                   >
                     Services
@@ -154,7 +156,10 @@ const Navbar = () => {
             <div className="px-5">
               <div className="flex navbar justify-between">
                 <div>
-                  <Link to="/" onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}>
+                  <Link
+                    to="/"
+                    onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}
+                  >
                     <img src={logo} alt="logo" className="h-16" />
                   </Link>
                 </div>

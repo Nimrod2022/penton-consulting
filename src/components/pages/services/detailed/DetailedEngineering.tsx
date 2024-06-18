@@ -36,7 +36,11 @@ const DetailedEngineering = () => {
           </div>
           {/* Text content right */}
           <div className="md:w-[65%] text-[#373B3D]">
-            <img src={serviceImage} alt="engineering" className="md:pt-0 pt-5" />
+            <img
+              src={serviceImage}
+              alt="engineering"
+              className="md:pt-0 pt-5"
+            />
 
             <h1 className="text-black md:text-2xl font-libre py-3">
               Navigate Energy Regulations with Confidence
