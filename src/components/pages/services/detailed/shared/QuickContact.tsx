@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 const QuickContact = () => {
   const [name, setName] = useState('');

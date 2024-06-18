@@ -125,7 +125,7 @@ const Form = () => {
             <div className="flex flex-col">
               <textarea
                 placeholder="Message"
-                rows="4"
+            rows={4}
                 id="message"
                 required
                 className="border-[#D6DDED] border bg-[#036] rounded-lg p-5 w-full"
