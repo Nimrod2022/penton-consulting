@@ -9,22 +9,22 @@ const Services = () => {
   return (
     <section id="services" className="pt-28">
       <div
-        className={`bg-cover w-full bg-[url("../../../public/assets/services-bg.svg")] md:py-28 services-bg`}
+        className={`bg-cover w-full bg-[url("../../../public/assets/services-bg.svg")] py-10 md:py-28 services-mobile-bg md:services-bg`}
       >
-        <h4 className=" text-white text-center text-3xl font-libre">
+        <h4 className=" text-white text-center text-xl md:text-3xl font-libre">
           Services
         </h4>
-        <div className="text-center md:text-xl justify-center flex items-center md:gap-2 text-white">
+        <div className="text-center md:text-xl justify-center flex items-center gap-2 text-white">
           <p>Home</p>
-          <IoArrowForwardSharp className="text-[#FFA500]  size-6" />
+          <IoArrowForwardSharp className="text-[#FFA500] size-4 md:size-6" />
           <p>Services</p>
         </div>
       </div>
 
-      <div className=" bg-[#DAEAF2] py-10 ">
+      <div className=" bg-[#DAEAF2]  md:py-10 ">
         <div className="text-center py-5">
           <p className="text-[#FFA500] text-xl"> Our Services Portfolio</p>
-          <p className="font-libre text-3xl md:pb-10 pt-5">
+          <p className="font-libre text-xl md:text-3xl md:pb-10 pt-5 md:px-0 px-5">
             Comprehensive Energy Solutions
           </p>
         </div>

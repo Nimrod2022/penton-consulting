@@ -10,6 +10,7 @@ import Button from '../../buttons/Button';
 
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const dispatch = useDispatch();
   const isAboveMediumScreens = UseMediaQuery('(min-width: 1060px)');
   const location = useLocation();
@@ -26,9 +27,7 @@ const Navbar = () => {
       }
     };
 
-    // Call handleScroll once on mount to set initial state
     handleScroll();
-
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -36,7 +35,6 @@ const Navbar = () => {
     };
   }, []);
 
-  // change nav item text on click
   const getLinkClass = (path: string) => {
     return location.pathname === path ? 'text-[#0D65BE]' : '';
   };
@@ -63,13 +61,71 @@ const Navbar = () => {
                 >
                   Home
                 </Link>
-                <Link
-                  to="/services"
-                  onClick={() => dispatch(setCurrentPage(CurrentPage.Services))}
-                  className={getLinkClass('/services')}
+                <div
+                  className="relative"
+                  onMouseEnter={() => setIsDropdownOpen(true)}
+                  onMouseLeave={() => setIsDropdownOpen(false)}
                 >
-                  Services
-                </Link>
+                  <Link
+                    to="/services"
+                    onClick={() => dispatch(setCurrentPage(CurrentPage.Services))}
+                    className={`${getLinkClass('/services')} flex items-center`}
+                  >
+                    Services
+                    <svg
+                      className="w-4 h-4 ml-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </Link>
+                  {isDropdownOpen && (
+                    <div
+                      className="absolute left-0 w-48 py-2 mt-2 bg-white border rounded shadow-lg"
+                      onMouseEnter={() => setIsDropdownOpen(true)}
+                      onMouseLeave={() => setIsDropdownOpen(false)}
+                    >
+                      <Link
+                        to="/services/service1"
+                        onClick={() => {
+                          dispatch(setCurrentPage(CurrentPage.Services));
+                          setIsDropdownOpen(false);
+                        }}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
+                      >
+                        Service 1
+                      </Link>
+                      <Link
+                        to="/services/service2"
+                        onClick={() => {
+                          dispatch(setCurrentPage(CurrentPage.Services));
+                          setIsDropdownOpen(false);
+                        }}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
+                      >
+                        Service 2
+                      </Link>
+                      <Link
+                        to="/services/service3"
+                        onClick={() => {
+                          dispatch(setCurrentPage(CurrentPage.Services));
+                          setIsDropdownOpen(false);
+                        }}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200"
+                      >
+                        Service 3
+                      </Link>
+                    </div>
+                  )}
+                </div>
                 <Link
                   to="/projects"
                   onClick={() => dispatch(setCurrentPage(CurrentPage.Projects))}
@@ -98,7 +154,7 @@ const Navbar = () => {
             <div className="px-5">
               <div className="flex navbar justify-between">
                 <div>
-                  <Link to="/" onClick={() => setCurrentPage(CurrentPage.Home)}>
+                  <Link to="/" onClick={() => dispatch(setCurrentPage(CurrentPage.Home))}>
                     <img src={logo} alt="logo" className="h-16" />
                   </Link>
                 </div>
@@ -115,7 +171,7 @@ const Navbar = () => {
                     <button
                       aria-label="Toggle Menu"
                       onClick={() => setIsMenuToggled(!isMenuToggled)}
-                      className="rounded-full bg-[#003366] z-50  my-4"
+                      className="rounded-full bg-[#003366] z-50 my-4"
                       style={{ position: 'relative' }}
                     >
                       <XMarkIcon className="size-10 text-rose-400" />
@@ -127,11 +183,10 @@ const Navbar = () => {
           )}
         </div>
         {!isAboveMediumScreens && isMenuToggled && (
-          // Mobile Menu
-          <div className=" top-0 fixed   z-40">
+          <div className="top-0 fixed z-40">
             <div className="relative">
               <div className="fixed inset-0 z-30 h-screen drop-shadow-xl">
-                <div className="flex flex-col text-xl justify-center bg-blue-50 pt-20 h-[50%] duration-300 ease-in-out items-center gap-5 ">
+                <div className="flex flex-col text-xl justify-center bg-blue-50 pt-20 h-[50%] duration-300 ease-in-out items-center gap-5">
                   <Link
                     to="/"
                     onClick={() => {
@@ -154,7 +209,7 @@ const Navbar = () => {
                     to="/projects"
                     onClick={() => {
                       setIsMenuToggled(false);
-                      dispatch(setCurrentPage(CurrentPage.Services));
+                      dispatch(setCurrentPage(CurrentPage.Projects));
                     }}
                   >
                     Projects
