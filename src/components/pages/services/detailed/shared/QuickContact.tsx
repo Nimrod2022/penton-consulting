@@ -3,7 +3,7 @@ import { TEInput, TETextarea } from 'tw-elements-react';
 const QuickContact = () => {
   return (
     <div className="block w-full font-libre text-black bg-[#E3F2FA] p-6 border-2 border-[#858686]">
-      <h1 className="text-2xl pb-5">Quick Contact</h1>
+      <h1 className="text-lg md:text-2xl pb-5">Quick Contact</h1>
       <form>
         <TEInput
           type="text"

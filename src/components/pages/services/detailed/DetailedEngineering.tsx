@@ -92,6 +92,10 @@ const DetailedEngineering = () => {
                 Freaquently Asked Questions
               </p>
               <FAQS />
+
+              <div className="block md:hidden px-5">
+                <QuickContact />
+              </div>
             </div>
           </div>
         </div>
