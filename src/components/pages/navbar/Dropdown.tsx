@@ -23,7 +23,7 @@ const Dropdown: React.FC<DropdownProps> = ({ onMouseEnter, onMouseLeave }) => {
         to="/services/energy"
         className="block px-4 py-2 hover:text-[#0D65BE] hover:bg-gray-100"
       >
-        Energy compliance 
+        Energy compliance
       </Link>
       <Link
         to="/services/environment"
