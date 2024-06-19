@@ -1,4 +1,4 @@
-import landingImage from '../../../../../public/assets/landing-bg.svg';
+import landingImage from '../../../../../public/assets/landing-bg.png';
 import landingImageMobile from '../../../../../public/assets/landing-mobile.png';
 import { useAppSelector } from '../../../../hooks/UseApp';
 import { CurrentPage } from '../../../../shared/types';
