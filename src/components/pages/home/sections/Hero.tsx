@@ -40,7 +40,7 @@ const Hero = () => {
 
               <div className="flex pt-7 md:justify-start justify-center md:pt-5 gap-5 md:gap-10 md:w-3/6">
                 <Button
-                  targetPage={CurrentPage.Services}
+                  targetPage={CurrentPage.Contact}
                   style="border-none bg-[#FFA500] rounded-md text-black"
                 >
                   Get started
