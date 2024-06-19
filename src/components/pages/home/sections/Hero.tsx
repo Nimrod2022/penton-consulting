@@ -1,4 +1,4 @@
-import landingImage from '../../../../../public/assets/landing-bg.png';
+import landingImage from '../../../../../public/assets/landing-bg.svg';
 import landingImageMobile from '../../../../../public/assets/landing-mobile.png';
 import { useAppSelector } from '../../../../hooks/UseApp';
 import { CurrentPage } from '../../../../shared/types';
@@ -10,11 +10,11 @@ const Hero = () => {
   return (
     <section className="w-full">
       <div>
-        <div >
+        <div>
           <img
             src={landingImage}
             alt="home"
-            className="md:pt-5 hidden md:block   md:w-full"
+            className="md:pt-5 hidden md:block md:w-full"
           />
           <img
             src={landingImageMobile}
@@ -23,9 +23,9 @@ const Hero = () => {
           />
         </div>
         <div className="w-full bg-[#003366] ">
-          <div className="text-white  md:py-10 xl:py-7 md:flex md:gap-40 md:w-5/6 xl:w-4/6 mx-auto items-center">
+          <div className="text-white   md:py-20  md:flex md:gap-40 md:w-5/6 xl:w-4/6 mx-auto items-center">
             <div className="md:pt-0 pt-5">
-              <h1 className="md:text-3xl text-xl md:px-0 text-center  md:text-start  font-libre">
+              <h1 className="md:text-4xl text-xl md:px-0 text-center  md:text-start  font-libre">
                 Where Innovation Meets Energy Excellence
               </h1>
             </div>
