@@ -14,7 +14,7 @@ const Hero = () => {
           <img
             src={landingImage}
             alt="home"
-            className="md:pt-5 hidden md:block md:w-full"
+            className="md:pt-5 hidden md:block h-[60%] md:w-full"
           />
           <img
             src={landingImageMobile}
@@ -23,7 +23,7 @@ const Hero = () => {
           />
         </div>
         <div className="w-full bg-[#003366] ">
-          <div className="text-white   md:py-20  md:flex md:gap-40 md:w-5/6 xl:w-4/6 mx-auto items-center">
+          <div className="text-white sm:py-20  md:py-5 xl:py-7 md:flex md:gap-40 md:w-5/6 xl:w-4/6 mx-auto items-center">
             <div className="md:pt-0 pt-5">
               <h1 className="md:text-4xl text-xl md:px-0 text-center  md:text-start  font-libre">
                 Where Innovation Meets Energy Excellence
