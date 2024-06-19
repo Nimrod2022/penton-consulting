@@ -9,7 +9,7 @@ interface DropdownProps {
 const Dropdown: React.FC<DropdownProps> = ({ onMouseEnter, onMouseLeave }) => {
   return (
     <div
-      className="absolute left-0 mt-2 md:w-50 bg-white text-sm border border-gray-200 rounded-md shadow-lg"
+      className="absolute left-0 mt-2 md:w-60 bg-white text-sm border border-gray-200 rounded-md shadow-lg"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
@@ -17,19 +17,19 @@ const Dropdown: React.FC<DropdownProps> = ({ onMouseEnter, onMouseLeave }) => {
         to="/services/engineering"
         className="block px-4 py-2 hover:text-[#0D65BE]  hover:bg-gray-100"
       >
-        Engineering
+        Engineering services
       </Link>
       <Link
         to="/services/energy"
         className="block px-4 py-2 hover:text-[#0D65BE] hover:bg-gray-100"
       >
-        Energy compliance
+        Energy compliance 
       </Link>
       <Link
         to="/services/environment"
         className="block px-4 py-2 hover:text-[#0D65BE] hover:bg-gray-100"
       >
-        Environmental
+        Environmental services
       </Link>
       <Link
         to="/services/quotations"
