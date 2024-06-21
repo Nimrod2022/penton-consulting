@@ -51,8 +51,13 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     const timeoutId = window.setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 200); // Adjust the delay as needed
+    }, 200); 
     setDropdownTimeout(timeoutId);
+  };
+
+  const handleLinkClick = (currentPage: CurrentPage) => {
+    dispatch(setCurrentPage(currentPage));
+    setIsMenuToggled(false); 
   };
 
   const renderLink = (
@@ -62,7 +67,7 @@ const Navbar = () => {
   ) => (
     <Link
       to={path}
-      onClick={() => dispatch(setCurrentPage(currentPage))}
+      onClick={() => handleLinkClick(currentPage)}
       className={getLinkClass(path)}
     >
       {label}
@@ -92,9 +97,7 @@ const Navbar = () => {
                 >
                   <Link
                     to="/services"
-                    onClick={() =>
-                      dispatch(setCurrentPage(CurrentPage.Services))
-                    }
+                    onClick={() => handleLinkClick(CurrentPage.Services)}
                     className={`${getLinkClass('/services')} flex items-center`}
                   >
                     Services
