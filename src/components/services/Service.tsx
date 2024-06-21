@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import UseMediaQuery from '../../hooks/UseMediaQuery';
+import { Slide } from 'react-awesome-reveal';
 
 type Props = {
   title: string;
@@ -59,9 +60,14 @@ const Service = ({
       {content}
     </motion.div>
   ) : (
-    <div className="flex flex-col justify-between w-full md:w-1/3 p-4">
+    <Slide
+      cascade={true}
+      triggerOnce={true}
+      direction="up"
+      className="flex flex-col justify-between w-full md:w-1/3 p-4"
+    >
       {content}
-    </div>
+    </Slide>
   );
 };
 
