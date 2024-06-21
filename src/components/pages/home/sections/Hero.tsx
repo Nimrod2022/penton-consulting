@@ -1,12 +1,12 @@
 import landingImage from '../../../../../public/assets/landing-bg.svg';
 import landingImageMobile from '../../../../../public/assets/landing-mobile.png';
-import { useAppSelector } from '../../../../hooks/UseApp';
+// import { useAppSelector } from '../../../../hooks/UseApp';
 import { CurrentPage } from '../../../../shared/types';
 import Button from '../../../buttons/Button';
 
 const Hero = () => {
-  const currentPage = useAppSelector((state) => state.page.page);
-  console.log('Current page in Hero component:', currentPage);
+  // const currentPage = useAppSelector((state) => state.page.page);
+  // console.log('Current page in Hero component:', currentPage);
   return (
     <section className="w-full">
       <div>
@@ -47,6 +47,7 @@ const Hero = () => {
                 </Button>
                 <Button
                   targetPage={CurrentPage.Services}
+                  
                   style="bg-[#003366] text-white border border-[#39FF14] rounded-md"
                 >
                   Learn more

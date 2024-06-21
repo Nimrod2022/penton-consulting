@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import UseMediaQuery from '../../hooks/UseMediaQuery';
 
 type Props = {
   title: string;
@@ -18,18 +19,10 @@ const Service = ({
   serviceId,
   index,
 }: Props) => {
-  return (
-    <motion.div
-      className="flex flex-col justify-between w-full md:w-1/3 p-4"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ duration: 0.5, delay: index * 0.2 }}
-      variants={{
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 },
-      }}
-    >
+  const isAboveMediumScreens = UseMediaQuery('(min-width: 768px)')
+
+  const content = (
+    <>
       <Link to={`/services/${serviceId}`} className="flex flex-col h-full">
         <div className="flex-grow">
           <img src={image} alt={title} className="w-full h-full object-cover" />
@@ -48,7 +41,27 @@ const Service = ({
           </div>
         </div>
       </Link>
+    </>
+  );
+
+  return isAboveMediumScreens ? (
+    <motion.div
+      className="flex flex-col justify-between w-full md:w-1/3 p-4"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.5 }}
+      transition={{ duration: 0.5, delay: index * 0.2 }}
+      variants={{
+        hidden: { opacity: 0, x: -50 },
+        visible: { opacity: 1, x: 0 },
+      }}
+    >
+      {content}
     </motion.div>
+  ) : (
+    <div className="flex flex-col justify-between w-full md:w-1/3 p-4">
+      {content}
+    </div>
   );
 };
 
