@@ -64,7 +64,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="md:flex gap-y-10 md:gap-x-10 md:justify-between mx-auto pb-10 md:pb-20  grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+          <div className="md:flex gap-y-10 md:gap-x-10 md:justify-between mx-auto pb-10 md:pb-20  grid xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             <div>
               <Operations
                 image={safetyOperation}
