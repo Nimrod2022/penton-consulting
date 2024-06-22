@@ -8,7 +8,7 @@ import Button from '../buttons/Button';
 const Footer = () => {
   return (
     <section className="bg-[#036] md:py-10 ">
-      <div className="md:mx-auto px-5 md:px-0 w-5/6 xl:w-4/6 flex md:justify-center items-center md:gap-40 xl:gap-60">
+      <div className="md:mx-auto px-5 md:px-0 w-5/6 xl:w-4/6 flex justify-center items-center gap-10 md:gap-40 xl:gap-60">
         <div>
           <img src={logo} alt="logo" className="md:block hidden" />
         </div>
