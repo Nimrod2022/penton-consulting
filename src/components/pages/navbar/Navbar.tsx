@@ -1,16 +1,17 @@
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
 import { useState, useEffect } from 'react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/16/solid';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import Dropdown from './Dropdown';
 import logo from '../../../../public/assets/logo.svg';
 import UseMediaQuery from '../../../hooks/UseMediaQuery';
 import { setCurrentPage } from '../../../reducers/buttonSlice';
 import { CurrentPage } from '../../../shared/types';
 import Button from '../../buttons/Button';
+import Dropdown from './Dropdown';
 
 const Navbar = () => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+  const [isServicesOpen, setIsServicesOpen] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [dropdownTimeout, setDropdownTimeout] = useState<number | null>(null);
   const dispatch = useDispatch();
@@ -51,13 +52,13 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     const timeoutId = window.setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 200); 
+    }, 200);
     setDropdownTimeout(timeoutId);
   };
 
   const handleLinkClick = (currentPage: CurrentPage) => {
     dispatch(setCurrentPage(currentPage));
-    setIsMenuToggled(false); 
+    setIsMenuToggled(false);
   };
 
   const renderLink = (
@@ -73,6 +74,14 @@ const Navbar = () => {
       {label}
     </Link>
   );
+
+  const toggleMenu = () => {
+    setIsMenuToggled(!isMenuToggled);
+  };
+
+  const toggleServices = () => {
+    setIsServicesOpen(!isServicesOpen);
+  };
 
   return (
     <header>
@@ -150,7 +159,7 @@ const Navbar = () => {
                   <button
                     aria-label="Toggle Menu"
                     className="rounded-full bg-[#003366] z-40 p-2 my-4"
-                    onClick={() => setIsMenuToggled(!isMenuToggled)}
+                    onClick={toggleMenu}
                   >
                     {!isMenuToggled ? (
                       <Bars3Icon className="size-6 text-white" />
@@ -167,9 +176,81 @@ const Navbar = () => {
           <div className="top-0 fixed z-40">
             <div className="relative">
               <div className="fixed inset-0 z-30 h-screen drop-shadow-xl">
-                <div className="flex flex-col text-xl justify-center bg-blue-50 pt-20 h-[50%] duration-300 ease-in-out items-center gap-5">
+                <div className="flex flex-col text-xl bg-blue-50 pt-32 h-[50%] duration-300 ease-in-out gap-4 px-5">
                   {renderLink('/', 'Home', CurrentPage.Home)}
-                  {renderLink('/services', 'Services', CurrentPage.Services)}
+                  <div className="relative w-full">
+                    <button
+                      onClick={toggleServices}
+                      className={`flex items-center w-full   ${
+                        getLinkClass('/services') ? 'text-[#0D65BE]' : ''
+                      }`}
+                    >
+                      Services
+                      <svg
+                        className={`w-4 h-4 ml-1 transform transition-transform ${
+                          isServicesOpen ? 'rotate-180' : ''
+                        }`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 9l-7 7-7-7"
+                        ></path>
+                      </svg>
+                    </button>
+                    {isServicesOpen && (
+                      <div className="absolute left-0 top-full mt-2 bg-white text-sm w-full shadow-lg z-50">
+                        <div className="flex flex-col p-4">
+                          <Link
+                            to="/services/engineering"
+                            className="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+                            onClick={() => {
+                              setIsMenuToggled(false);
+                              setIsServicesOpen(false);
+                            }}
+                          >
+                            Engineering services
+                          </Link>
+                          <Link
+                            to="/services/energy"
+                            className="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+                            onClick={() => {
+                              setIsMenuToggled(false);
+                              setIsServicesOpen(false);
+                            }}
+                          >
+                            Energy compliance
+                          </Link>
+                          <Link
+                            to="/services/environment"
+                            className="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+                            onClick={() => {
+                              setIsMenuToggled(false);
+                              setIsServicesOpen(false);
+                            }}
+                          >
+                            Environmental services
+                          </Link>
+
+                          <Link
+                            to="/services/quotations"
+                            className="block py-2 px-4 text-gray-800 hover:bg-gray-100"
+                            onClick={() => {
+                              setIsMenuToggled(false);
+                              setIsServicesOpen(false);
+                            }}
+                          >
+                            Project quotations
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                   {renderLink('/projects', 'Projects', CurrentPage.Projects)}
                   {renderLink('/contact', 'Contact', CurrentPage.Contact)}
                 </div>

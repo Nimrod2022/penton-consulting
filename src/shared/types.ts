@@ -10,3 +10,23 @@ export enum CurrentPage {
 }
 
 export const TOGGLE_ANIMATION = 'TOGGLE_ANIMATION';
+
+
+export interface Project {
+  id: number;
+  title: string;
+  bImage: string;
+  projectImages: string[];
+}
+
+export interface TileProps {
+  project: Project;
+  onClick: (project: Project) => void;
+}
+
+export interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  project: Project | null;
+}
+

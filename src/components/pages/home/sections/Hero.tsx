@@ -19,7 +19,7 @@ const Hero = () => {
           <img
             src={landingImageMobile}
             alt="home"
-            className="md:pt-5 md:hidden block md:w-full h-4/6"
+            className="md:pt-5 md:hidden block md:w-full h-3/6"
           />
         </div>
         <div className="w-full bg-[#003366] ">
