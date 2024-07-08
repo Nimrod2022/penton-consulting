@@ -2,19 +2,19 @@ const faqsData = [
   {
     question: 'What is Oil and Gas Compliance?',
     answer:
-      'Oil and gas consulting involves providing expert advice and solutions for projects in the oil and gas industry, including areas such as architectural and structural drawings, energy regulatory compliance, and environmental impact assessments.',
+      'This revolves around enabling a client obtain pre-requisite approvals from regulatory bodies such as EPRA, NEMA, KEBS AND DOSH, they will include obtaining Permits for Pre-construction phase and Operational licenses for the various facilities in line with the Petroleum Act no, 2 of 2019, Energy ACT 2019, EMCA 1997, etc.',
     open: false,
   },
   {
     question: 'How long does it take to process engineering drawings?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.',
+      'Architectural and Engineering Drawings differ from client to client, on average for a standard type of facility architectural designs revolve around a week, the more the detail, the less the time also goes hand in hand with the cost of the service',
     open: false,
   },
   {
     question: 'What is EIA /EA compliance?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.',
+      'Environmental Impact Assessment Compliance is a preconstruction obligation of any developer investing in a project in order to establish the impact of a project on the Social, environmental and economic aspects of a certain jurisdiction/demography and proposes mitigation paths for any negative impacts identified, this is presented to NEMA for their approval. Environmental Audit is an operational obligation of an existing licensed facility such as a Petroleum Retail Station, Oil depot, Energy thermal plant etc. and allows for the annual improvement of ones’ facility.',
     open: false,
   },
   {
@@ -25,8 +25,7 @@ const faqsData = [
   },
   {
     question: 'What other services do we offer?',
-    answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.',
+    answer: 'Prefeasibility studies and Traffic Impact assessment',
     open: false,
   },
 ];

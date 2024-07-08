@@ -3,7 +3,7 @@ import ContactBanner from './shared/ContactBanner';
 import DetailedButton from './shared/DetailedButton';
 import QuickContact from './shared/QuickContact';
 import serviceImage from '../../../../../public/assets/engineering-detailed-image.svg';
-import FAQS from '../../home/sections/FAQS';
+// import FAQS from '../../home/sections/FAQS';
 
 const DetailedEnergy = () => {
   return (
@@ -48,16 +48,66 @@ const DetailedEnergy = () => {
               </h1>
 
               <p className="pb-5 md:pb-10">
-                In the dynamic world of energy, staying compliant with all
-                regulations is not just about legal requirement—it is strategic
-                imperative. At Penton, we specialize in guiding companies
-                through the maze of licenses, permits, technical audits, and
-                emergency response planning. Our expert team ensures that your
-                energy projects are not only compliant but also optimized for
-                efficiency and sustainability.
+                This service generally revolves around obtaining pre-requisite
+                approvals from the various regulators in the Energy, Petroleum,
+                Construction, safety space such as EPRA, KEBS, NEMA, NCA, KeNHA,
+                KURA, KeRRA, County Governments, Weights and measures etc., this
+                includes application for Licenses and applications for
+                Construction permits etc. this also revolves around the various
+                Acts of Parliament such as EMCA ACT, Petroleum Act 2019, Water
+                Act 2016, Energy Act 2019, Roads Act 2007 among others,
               </p>
 
-              <h3 className="text-[#FFA500] pb-5 text-lg">
+              <div>
+                <h2 className="text-xl font-bold mb-4">
+                  1. Application of Petroleum licenses
+                </h2>
+                <ul className="list-disc pl-6 mb-4">
+                  <li>Import of Petroleum Products licenses</li>
+                  <li>Export & Wholesale (Reseller Licenses)</li>
+                  <li>
+                    Brand Owner (Storage & wholesale of LPG in Cylinders
+                    license)
+                  </li>
+                  <li>Import of LPG in Bulk License</li>
+                  <li>Export and Wholesale of LPG in Bulk License</li>
+                  <li>Petroleum Road Tanker Driver License</li>
+                  <li>Electrical Worker License</li>
+                  <li>Electrical Contractor License, etc.</li>
+                  <li>Solar photovoltaic Technician License</li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-4">
+                  2. Application for Construction Permit
+                </h2>
+                <ul className="list-disc pl-6 mb-4">
+                  <li>Retail dispensing station</li>
+                  <li>Storage and filling facility</li>
+                  <li>Consumer site, etc.</li>
+                </ul>
+
+                <h2 className="text-xl font-bold mb-4">
+                  3. Technical audits for existing facilities
+                </h2>
+
+                <h2 className="text-xl font-bold mb-4">
+                  4. Generation of closing out action plans for already
+                  undertaken audits by lead Agencies
+                </h2>
+
+                <h2 className="text-xl font-bold mb-4">
+                  5. Facility works in closing out recommendations from
+                  Environmental, fire and EPRA audits.
+                </h2>
+
+                <h2 className="text-xl font-bold mb-4">
+                  6. Follow-up on clearance of fines from regulatory
+                  non-compliance including fuel marking penalties with KRA,
+                  KEBS, EPRA
+                </h2>
+              </div>
+
+              {/* <h3 className="text-[#FFA500] pb-5 text-lg">
                 Detailed breakdown
               </h3>
 
@@ -85,13 +135,13 @@ const DetailedEnergy = () => {
                 planning. Our tailored plans help you manage risks and minimize
                 downtime in crisis situations, ensuring you maintain regulatory
                 compliance even under pressure.
-              </p>
+              </p> */}
             </div>
             <div className="pt-10 ">
-              <p className="md:text-2xl text-xl text-center font-bold">
+              {/* <p className="md:text-2xl text-xl text-center font-bold">
                 Freaquently Asked Questions
               </p>
-              <FAQS />
+              <FAQS /> */}
 
               <div className="block md:hidden px-5">
                 <QuickContact />

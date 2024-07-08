@@ -88,10 +88,10 @@ const DetailedQuotations = () => {
               </p>
             </div>
             <div className="pt-10 ">
-              <p className="md:text-2xl text-xl text-center font-bold">
+              {/* <p className="md:text-2xl text-xl text-center font-bold">
                 Freaquently Asked Questions
               </p>
-              <FAQS />
+              <FAQS /> */}
 
               <div className="block md:hidden px-5">
                 <QuickContact />
