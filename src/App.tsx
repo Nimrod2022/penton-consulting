@@ -1,4 +1,4 @@
-// App.tsx
+
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/footer/Footer';
@@ -12,31 +12,12 @@ import DetailedEngineering from './components/pages/services/detailed/DetailedEn
 import DetailedEnvironment from './components/pages/services/detailed/DetailedEnvironment';
 import DetailedQuotations from './components/pages/services/detailed/DetailedQuotations';
 import Services from './components/pages/services/Services';
-import Spinner from './components/Spinner';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const handlePageLoad = () => {
-      
-      setTimeout(() => {
-        setLoading(false);
-      }, 1000); 
-    };
-
-    if (document.readyState === 'complete') {
-      handlePageLoad();
-    } else {
-      window.addEventListener('load', handlePageLoad);
-      return () => window.removeEventListener('load', handlePageLoad);
-    }
-  }, []);
+ 
 
   return (
-    <div>
-      {loading && <Spinner />}
-      {!loading && (
+    
         <Router>
           <ScrollToTop />
           <Navbar />
@@ -61,8 +42,7 @@ function App() {
           </Routes>
           <Footer />
         </Router>
-      )}
-    </div>
+    
   );
 }
 

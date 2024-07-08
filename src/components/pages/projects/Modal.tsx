@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { ModalProps } from '../../../shared/types';
 import { RxCross2 } from 'react-icons/rx';
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, project }) => {
   if (!isOpen || !project) return null;
