@@ -1,5 +1,5 @@
 // App.tsx
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Contact from './components/pages/contact/Contact';
@@ -19,7 +19,10 @@ function App() {
 
   useEffect(() => {
     const handlePageLoad = () => {
-      setLoading(false);
+      
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000); 
     };
 
     if (document.readyState === 'complete') {
