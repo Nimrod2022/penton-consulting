@@ -3,7 +3,7 @@ import ContactBanner from './shared/ContactBanner';
 import DetailedButton from './shared/DetailedButton';
 import QuickContact from './shared/QuickContact';
 import serviceImage from '../../../../../public/assets/engineering-detailed-image.svg';
-import FAQS from '../../home/sections/FAQS';
+// import FAQS from '../../home/sections/FAQS';
 
 const DetailedQuotations = () => {
   return (

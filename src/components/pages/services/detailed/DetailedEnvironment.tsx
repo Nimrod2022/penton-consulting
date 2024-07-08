@@ -3,7 +3,7 @@ import ContactBanner from './shared/ContactBanner';
 import DetailedButton from './shared/DetailedButton';
 import QuickContact from './shared/QuickContact';
 import serviceImage from '../../../../../public/assets/engineering-detailed-image.svg';
-import FAQS from '../../home/sections/FAQS';
+// import FAQS from '../../home/sections/FAQS';
 
 const DetailedEnvironment = () => {
   return (
@@ -44,48 +44,27 @@ const DetailedEnvironment = () => {
               />
 
               <h1 className="text-black md:text-2xl font-libre py-3">
-                Navigate Energy Regulations with Confidence
+                Environmental Compliance Services
               </h1>
 
               <p className="pb-5 md:pb-10">
-                In the dynamic world of energy, staying compliant with all
-                regulations is not just about legal requirement—it is strategic
-                imperative. At Penton, we specialize in guiding companies
-                through the maze of licenses, permits, technical audits, and
-                emergency response planning. Our expert team ensures that your
-                energy projects are not only compliant but also optimized for
-                efficiency and sustainability.
+                This is a complimentary to the energy and Oil and Gas related
+                projects, it may come during pre-construction project
+                conceptualization by way of the undertaking an Environmental and
+                Social Impact Assessment report and/or during Project operation
+                process by way of an Environmental audit report. Additionally,
+                this goes hand in hand with a fire risk assessment audit, an
+                occupational safety assessment audit etc. as part of a facility
+                self-improvement process Environmental related services.
               </p>
 
-              <h3 className="text-[#FFA500] pb-5 text-lg">
-                Detailed breakdown
-              </h3>
-
-              <h2 className="text-[#003366] text-xl">Licenses & Permits</h2>
-              <p className="pb-5">
-                Secure all necessary approvals to launch and operate your energy
-                projects legally across different regions. Our service covers
-                application processes, documentation, and liaising with
-                regulatory bodies.
-              </p>
-
-              <h2 className="text-[#003366]  text-xl">Technical audits</h2>
-              <p className="pb-5">
-                Rely on our thorough audits to ensure that all aspects of your
-                energy project adhere to current regulations and industry
-                standards. We help identify potential compliance issues before
-                they become costly problems.
-              </p>
-
-              <h2 className="text-[#003366] text-xl">
-                Emergency response plans
-              </h2>
-              <p>
-                Prepare for the unexpected with our strategic emergency response
-                planning. Our tailored plans help you manage risks and minimize
-                downtime in crisis situations, ensuring you maintain regulatory
-                compliance even under pressure.
-              </p>
+              <div>
+                <p className="text-2xl text-[#373B3D]">Services</p>
+                <ul className="list-disc my-4 text-xl ml-6">
+                  <li>Environmental Impact Assessment report.</li>
+                  <li>Environmental Audit Report</li>
+                </ul>
+              </div>
             </div>
             <div className="pt-10 ">
               {/* <p className="md:text-2xl text-xl text-center font-bold">

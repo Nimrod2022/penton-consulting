@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
+import { Fade } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
 import UseMediaQuery from '../../hooks/UseMediaQuery';
-import { Fade } from 'react-awesome-reveal';
 
 type Props = {
   title: string;
@@ -20,7 +20,7 @@ const Service = ({
   serviceId,
   index,
 }: Props) => {
-  const isAboveMediumScreens = UseMediaQuery('(min-width: 768px)')
+  const isAboveMediumScreens = UseMediaQuery('(min-width: 768px)');
 
   const content = (
     <>

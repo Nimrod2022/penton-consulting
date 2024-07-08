@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import UseMediaQuery from '../../../../hooks/UseMediaQuery';
 import { Slide } from 'react-awesome-reveal';
+import UseMediaQuery from '../../../../hooks/UseMediaQuery';
 type Props = {
   image: string;
   title: string;
@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Operations = ({ image, title, description, index }: Props) => {
-  const isAboveMediumScreens = UseMediaQuery('(min-width: 768px)' ); 
+  const isAboveMediumScreens = UseMediaQuery('(min-width: 768px)');
 
   const content = (
     <>
@@ -37,11 +37,12 @@ const Operations = ({ image, title, description, index }: Props) => {
     // <div className="bg-[#0E4379] md:w-full md:max-w-[380px] md:min-h-[450px] md:h-auto flex flex-col md:px-5 py-5 md:py-10 items-center px-5">
     //   {content}
     // </div>
-    <Slide 
-    cascade ={true}
-    triggerOnce={true}
-    direction='up'
-    className="bg-[#0E4379] md:w-full md:max-w-[380px] md:min-h-[450px] md:h-auto flex flex-col md:px-5 py-5 md:py-10 items-center px-5">
+    <Slide
+      cascade={true}
+      triggerOnce={true}
+      direction="up"
+      className="bg-[#0E4379] md:w-full md:max-w-[380px] md:min-h-[450px] md:h-auto flex flex-col md:px-5 py-5 md:py-10 items-center px-5"
+    >
       {content}
     </Slide>
   );

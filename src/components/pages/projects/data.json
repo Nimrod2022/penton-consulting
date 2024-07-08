@@ -7,22 +7,27 @@
       "/assets/station-1.png",
       "/assets/station-1.png",
       "/assets/station-1.png"
-
-     
     ]
   },
- {
+  {
     "id": 2,
     "title": "Oil & Gas Storage Facilities",
     "bImage": "/assets/storage-facilities-bg.png",
-    "projectImages": ["/assets/station-1.png", "/assets/station-1.png", "/assets/station-1.png"]
+    "projectImages": [
+      "/assets/station-1.png",
+      "/assets/station-1.png",
+      "/assets/station-1.png"
+    ]
   },
 
   {
     "id": 3,
     "title": "Architectural, Structural & Drawings",
     "bImage": "/assets/drawings.png",
-    "projectImages": ["/assets/station-1.png", "/assets/station-1.png", "/assets/station-1.png"]
+    "projectImages": [
+      "/assets/station-1.png",
+      "/assets/station-1.png",
+      "/assets/station-1.png"
+    ]
   }
- 
 ]

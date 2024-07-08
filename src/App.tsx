@@ -11,8 +11,6 @@ import DetailedEnvironment from './components/pages/services/detailed/DetailedEn
 import DetailedQuotations from './components/pages/services/detailed/DetailedQuotations';
 import Services from './components/pages/services/Services';
 
-
-
 function App() {
   // const currentPage = useSelector((state: RootState) => state.page.page);
 

@@ -11,7 +11,6 @@ export enum CurrentPage {
 
 export const TOGGLE_ANIMATION = 'TOGGLE_ANIMATION';
 
-
 export interface Project {
   id: number;
   title: string;
@@ -29,4 +28,3 @@ export interface ModalProps {
   onClose: () => void;
   project: Project | null;
 }
-

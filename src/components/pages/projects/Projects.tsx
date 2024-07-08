@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { IoArrowForwardSharp } from 'react-icons/io5';
-import Tile from './Tile';
-import Modal from './Modal';
 import projects from './data.json';
+import Modal from './Modal';
+import Tile from './Tile';
 import { Project } from '../../../shared/types';
 
 const Projects: React.FC = () => {
