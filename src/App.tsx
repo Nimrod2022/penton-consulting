@@ -1,5 +1,3 @@
-
-import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Contact from './components/pages/contact/Contact';
@@ -14,35 +12,22 @@ import DetailedQuotations from './components/pages/services/detailed/DetailedQuo
 import Services from './components/pages/services/Services';
 
 function App() {
- 
-
   return (
-    
-        <Router>
-          <ScrollToTop />
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services" element={<Services />} />
-            <Route
-              path="/services/engineering"
-              element={<DetailedEngineering />}
-            />
-            <Route
-              path="/services/environment"
-              element={<DetailedEnvironment />}
-            />
-            <Route path="/services/energy" element={<DetailedEnergy />} />
-            <Route
-              path="/services/quotations"
-              element={<DetailedQuotations />}
-            />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-          <Footer />
-        </Router>
-    
+    <Router>
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/engineering" element={<DetailedEngineering />} />
+        <Route path="/services/environment" element={<DetailedEnvironment />} />
+        <Route path="/services/energy" element={<DetailedEnergy />} />
+        <Route path="/services/quotations" element={<DetailedQuotations />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
