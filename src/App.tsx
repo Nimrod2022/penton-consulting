@@ -1,3 +1,5 @@
+// App.tsx
+import  { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Contact from './components/pages/contact/Contact';
@@ -10,26 +12,54 @@ import DetailedEngineering from './components/pages/services/detailed/DetailedEn
 import DetailedEnvironment from './components/pages/services/detailed/DetailedEnvironment';
 import DetailedQuotations from './components/pages/services/detailed/DetailedQuotations';
 import Services from './components/pages/services/Services';
+import Spinner from './components/Spinner';
 
 function App() {
-  // const currentPage = useSelector((state: RootState) => state.page.page);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handlePageLoad = () => {
+      setLoading(false);
+    };
+
+    if (document.readyState === 'complete') {
+      handlePageLoad();
+    } else {
+      window.addEventListener('load', handlePageLoad);
+      return () => window.removeEventListener('load', handlePageLoad);
+    }
+  }, []);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/engineering" element={<DetailedEngineering />} />
-        <Route path="/services/environment" element={<DetailedEnvironment />} />
-        <Route path="/services/energy" element={<DetailedEnergy />} />
-        <Route path="/services/quotations" element={<DetailedQuotations />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div>
+      {loading && <Spinner />}
+      {!loading && (
+        <Router>
+          <ScrollToTop />
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route
+              path="/services/engineering"
+              element={<DetailedEngineering />}
+            />
+            <Route
+              path="/services/environment"
+              element={<DetailedEnvironment />}
+            />
+            <Route path="/services/energy" element={<DetailedEnergy />} />
+            <Route
+              path="/services/quotations"
+              element={<DetailedQuotations />}
+            />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+          <Footer />
+        </Router>
+      )}
+    </div>
   );
 }
 
